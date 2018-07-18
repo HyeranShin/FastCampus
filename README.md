@@ -19,5 +19,7 @@ VariableConstant
 DataType
 - 자료형
 
+ArrayType
+- 배열
 
 
