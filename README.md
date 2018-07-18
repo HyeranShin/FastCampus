@@ -16,4 +16,8 @@ Coding Rule
 VariableConstant
 - 변수와 상수
 
+DataType
+- 자료형
+
+
 
