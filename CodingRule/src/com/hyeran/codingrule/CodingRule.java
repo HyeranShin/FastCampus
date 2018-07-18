@@ -47,6 +47,6 @@ public class CodingRule {
 	//							 영문만 사용하는 것을 권장
 	int firstName;
 	// 8.2 키워드는 식별자로 사용할 수 없음
-	int public;
+	// ex) int public;
 	// 8.3 식별자는 되도록 모두 낙타표기법을 사용 - 꼭!
 }
