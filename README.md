@@ -22,4 +22,5 @@ DataType
 ArrayType
 - 배열
 
-
+TypeCasting
+- 타입캐스팅
