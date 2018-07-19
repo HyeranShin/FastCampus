@@ -1,5 +1,5 @@
 # FastCampus
-안드로이드 앱 개발 시작하기 CAMP 수강 (18.07.15~)
+안드로이드 앱 개발 시작하기 CAMP 수강 (18.07.15-)
 
 ### 1. 프로그램 다운로드 및 설치 & 2. 이클립스 프로젝트 구조
 <a href="https://github.com/HyeranShin/FastCampus/tree/master/TestProject/src/com/hyeran/testproject">TestProject</a>
