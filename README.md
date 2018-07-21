@@ -34,3 +34,9 @@
 - run 버튼
 - JDK와 JRE로 보는 코드처리 과정
 ![image](https://user-images.githubusercontent.com/38368820/42943691-710977a4-8b9e-11e8-821c-e15679b181b0.png)
+
+### 5. 문자열 String 다루기
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/String/src/com/hyeran/string">String</a>
+- 자주 사용되는 String 함수 (1)
+- 자주 사용되는 String 함수 (2)
+- 문자열 함수 사용 예 (로그인 처리)
