@@ -40,3 +40,8 @@
 - 자주 사용되는 String 함수 (1)
 - 자주 사용되는 String 함수 (2)
 - 문자열 함수 사용 예 (로그인 처리)
+
+### 6. 조건문 (<a href="https://github.com/HyeranShin/FastCampus/blob/master/java%20%EC%A0%9C%EC%96%B4%EB%AC%B8.pdf">pdf</a>)
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/If/src/com/hyeran/if">If</a>
+- if
+
