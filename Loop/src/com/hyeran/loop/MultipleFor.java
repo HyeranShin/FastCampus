@@ -1,7 +1,7 @@
 package com.hyeran.loop;
 /**
  * 중첩 for
- * @author hyera
+ * @author hyeran
  *
  */
 public class MultipleFor {
