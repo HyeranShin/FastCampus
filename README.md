@@ -46,4 +46,4 @@
 - if
 - switch
 - switch문에서 break 없애기
-
+- if와 switch, 어떤게 좋을까?
