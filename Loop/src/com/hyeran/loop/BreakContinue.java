@@ -17,7 +17,16 @@ public class BreakContinue {
 		int offset = 10;	// 한단에 출력하는 개수
 		
 		// 구구단 코드
-		// 레이블
+		
+		/* 레이블을 이용해서 내부 for문에서 외부 for문을 제어 할 수 있음
+		 *  
+		 *  레이블명 : for () {
+		 *  	for () {
+		 *  		break 레이블명;
+		 *  	}
+		 *  }
+		 */
+		
 		out : for (int a = begin; a <= end; a = a+1) {
 			
 			// if (a > 5) break;
