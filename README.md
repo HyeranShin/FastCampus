@@ -56,3 +56,27 @@
 - break_continue
 - while_dowhile
 - 배열에서 반복문 사용하기
+
+### 8. Algorithm 문제 풀기
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/Algorithm/src/com/hyeran/algorithm">Algorithm</a>
+- 기본 알고리즘 예제 1 - sum
+- 기본 알고리즘 예제 2 - 피보나치
+
+### 9. 객체 지향에서의 클래스
+- Class_1
+- Class_2
+- Class_3
+- Class_4
+- 클래스와 인스턴스
+- Function
+- overload
+- constructor
+
+### 10. 클래스와 로딩
+- new와 static으로 보는 메모리(1)
+- new와 static으로 보는 메모리(2)
+
+### 11. 내장 객체와 라이브러리
+- 내장 객체, 내장 함수, 라이브러리
+- System.out은 어떻게 만들어져 있을까?
+- StringBuffer와 StringBuilder
