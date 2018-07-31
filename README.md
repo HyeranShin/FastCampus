@@ -69,6 +69,12 @@
 - Class_3
 - Class_4
 - 클래스와 인스턴스
+  1. Method Area - 모든 코드와 static 변수, 상수 정보 등이 저장
+  2. Heap - new 연산자로 생성된 모든 instance가 저장
+      - new를 하면 클래스 코드는 heap에 따로 저장되지 않고 Method Area에 있는 것을 가져다 사용
+      - heap에는 class의 멤버 변수만 저장
+  3. Java Stack - 함수 내에서 사용되는 변수 값과 리턴 값들이 저장
+      - 함수는 호출 후 종료되면 내부에서 선언되었던 값들이 사라지기 때문에 다른 영역 사용
 - Function
 - overload
 - constructor
