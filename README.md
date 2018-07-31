@@ -68,14 +68,47 @@
 - Class_2
 - Class_3
 - Class_4
+  ```
+  설계: 객체들의 이름을 나열하고 이들의 관계를 구성하는 것
+  코딩: 설계에서 만들어진 이름으로 자바 파일을 생성하고 코드를 채워 나가는 것
+  객체란: 앞으로 작성할 코드를 내가 이해할 수 있게 이름을 부여하는 것
+  클래스: 부여한 이름에 맞춰서 코드를 작성한 것
+
+  객체(Object)는 속성(Attribute)과 기능(Method)를 가지는 대상
+  
+  예시1. 사람
+  속성: 나이, 키, 몸무게, 성별, 이름
+  기능(함수): 걷다, 자다, 먹다
+  class Person() {
+          int age;
+          int height;
+          int weight;
+          String gender;
+          String name;
+
+          public void walk() {
+                    System.out.println("걷는 중");
+          }
+          public void sleep() {
+                    System.out.println("자는 중");
+          }
+          public void eat() {
+                    System.out.println("먹는 중");
+          }
+  }
+  
+  예시2. 자동차
+  속성: 모델, 색상, 배기량
+  기능: 좌회전, 우회전, 기어 변속, 문 열기, 후진, 창문 열기
+  ```
 - 클래스와 인스턴스     
   ```
-  1. Method Area - 모든 코드와 static 변수, 상수 정보 등이 저장
-  2. Heap - new 연산자로 생성된 모든 instance가 저장
-      - new를 하면 클래스 코드는 heap에 따로 저장되지 않고 Method Area에 있는 것을 가져다 사용
-      - heap에는 class의 멤버 변수만 저장
-  3. Java Stack - 함수 내에서 사용되는 변수 값과 리턴 값들이 저장
-      - 함수는 호출 후 종료되면 내부에서 선언되었던 값들이 사라지기 때문에 다른 영역 사용
+  Method Area: 모든 코드와 static 변수, 상수 정보 등이 저장
+  Heap: new 연산자로 생성된 모든 instance가 저장
+  * new를 하면 클래스 코드는 heap에 따로 저장되지 않고 Method Area에 있는 것을 가져다 사용
+  * heap에는 class의 멤버 변수만 저장
+  Java Stack: 함수 내에서 사용되는 변수 값과 리턴 값들이 저장
+  * 함수는 호출 후 종료되면 내부에서 선언되었던 값들이 사라지기 때문에 다른 영역 사용
   ```
 - Function
 - overload
