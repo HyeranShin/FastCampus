@@ -119,6 +119,14 @@ Java Stack: 함수 내에서 사용되는 변수 값과 리턴 값들이 저장
 
 <a href="https://github.com/HyeranShin/FastCampus/tree/master/Constructor/src/com/hyeran/constructor">Constructor</a>
 - constructor
+```
+생성자: 클래스 호출 시 자동으로 불리는 함수
+- 리턴 타입이 없는 함수 ex) public One() {}
+- 클래스의 이름과 함수의 이름이 같음 (대문자로 시작)
+- 생성자가 없으면 default 생성자 실행
+- 오버로드 가능
+- 접근 제한자 변경 가능
+```
 
 ### 10. 클래스와 로딩
 - new와 static으로 보는 메모리(1)
