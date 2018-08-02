@@ -33,4 +33,7 @@ public class Overload {
 	}
 	
 	// X. 리턴 타입은 오버로드 대상이 아님
+//	public int take(String str) {
+//		
+//	}
 }
