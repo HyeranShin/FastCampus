@@ -15,7 +15,7 @@
 - 코드 작성 규칙
 - 들여쓰기
 
-<a href="https://github.com/HyeranShin/FastCampus/tree/master/VariableConstant/src/com/hyeran/variableconstant">VariableConstant</a>
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/VariableConstant/src/com/hyeran/variableconstant/VariableConstant.java">VariableConstant</a>
 - 변수와 상수
 
 <a href="https://github.com/HyeranShin/FastCampus/tree/master/DataType/src/com/hyeran/datatype">DataType</a>
@@ -115,10 +115,11 @@ Java Stack: 함수 내에서 사용되는 변수 값과 리턴 값들이 저장
 
 <a href="https://github.com/HyeranShin/FastCampus/tree/master/Function/src/com/hyeran/function">Function</a>
 - Function
+```
+함수에 값 넘길 때 명칭: 입력 시 argument, 정의 시 parameter
+```
 - overload
 ```JAVA
-함수에 값 넘길 때 명칭: 입력 시 argument, 정의 시 parameter
-
 함수 오버로드: 동일한 함수 명으로 다른 동작
 
 1. 파라미터의 개수
