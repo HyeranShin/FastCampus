@@ -18,16 +18,16 @@
 <a href="https://github.com/HyeranShin/FastCampus/blob/master/VariableConstant/src/com/hyeran/variableconstant/VariableConstant.java">VariableConstant</a>
 - 변수와 상수
 
-<a href="https://github.com/HyeranShin/FastCampus/tree/master/DataType/src/com/hyeran/datatype">DataType</a>
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/DataType/src/com/hyeran/datatype/DataType.java">DataType</a>
 - 자료형
 
-<a href="https://github.com/HyeranShin/FastCampus/tree/master/ArrayType/src/com/hyeran/arraytype">ArrayType</a>
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/ArrayType/src/com/hyeran/arraytype/ArrayType.java">ArrayType</a>
 - 배열
 
-<a href="https://github.com/HyeranShin/FastCampus/tree/master/TypeCasting/src/com/hyeran/typecasting">TypeCasting</a>
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/TypeCasting/src/com/hyeran/typecasting/Typecasting.java">TypeCasting</a>
 - 타입캐스팅
 
-<a href="https://github.com/HyeranShin/FastCampus/tree/master/Operator/src/com/hyeran/operator">Operator</a>
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/Operator/src/com/hyeran/operator/Operator.java">Operator</a>
 - 연산자
 
 ### 4. Eclipse Run
@@ -138,8 +138,8 @@ X. 리턴 타입은 오버로드 대상이 아님
 - constructor
 ```
 생성자: 클래스 호출 시 자동으로 불리는 함수
-  * 리턴 타입이 없는 함수 ex) public One() {}
   * 클래스의 이름과 함수의 이름이 같음 (대문자로 시작)
+  * 리턴 타입이 없는 함수 ex) public One() {}
   * 생성자가 없으면 default 생성자 실행
   * 오버로드 가능
   * 접근 제한자 변경 가능
