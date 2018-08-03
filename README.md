@@ -129,8 +129,24 @@ Java Stack: 함수 내에서 사용되는 변수 값과 리턴 값들이 저장
 ```
 
 ### 10. 클래스와 로딩
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/UsingClass/src/com/hyeran/using/UsingMain.java">UsingClass</a>
 - new와 static으로 보는 메모리(1)
 - new와 static으로 보는 메모리(2)
+```
+클래스 자원(멤버 함수, 멤버 변수) 사용하는 방법
+
+1. new 연산자
+  * new 연산자를 사용했을 때 heaq으로 로드되면서 사용 가능한 상태가 됨
+  * 코드 자체는 code area에 올라가 있지만 사용 가능한 상태는 아님
+  * 장점: 공간 효율 ↑ - 사용할 때만 메모리 생성
+  * 단점: 처리 속도 ↓
+  
+2. static 예약어
+  * new 없이 클래스 명에 도트 연산자를 바로 사용
+  * code area로 내 코드가 static이니까 써도 된다고 알려주는 것
+  * 장점: 처리 속도 ↑
+  * 단점: 공간 효율 ↓ - 항상 메모리에 올려 놓고 써야 함
+```
 
 ### 11. 내장 객체와 라이브러리
 - 내장 객체, 내장 함수, 라이브러리
