@@ -3,7 +3,7 @@ package com.hyeran.loop;
  * break와 continue
  * 
  * break -> for문 종료
- * 	continue ->  해당 조건만 생략	
+ * continue -> 해당 조건만 생략	
  * 
  * @author hyeran
  *

@@ -18,7 +18,7 @@ public class Overload {
 	public void take(String str, String str2, String str3) {
 	}
 	
-	// 2. 파라미터의 타임
+	// 2. 파라미터의 타입
 	public void take(int number) {
 		System.out.println("숫자님이 탑승하셨습니다.");
 	}
