@@ -116,6 +116,22 @@ Java Stack: 함수 내에서 사용되는 변수 값과 리턴 값들이 저장
 <a href="https://github.com/HyeranShin/FastCampus/tree/master/Function/src/com/hyeran/function">Function</a>
 - Function
 - overload
+```JAVA
+함수에 값 넘길 때 명칭: 입력 시 argument, 정의 시 parameter
+
+함수 오버로드: 동일한 함수 명으로 다른 동작
+
+1. 파라미터의 개수
+public void take(String str) {}
+public void take(String str, str2) {}
+
+2. 파라미터의 타입(순서 포함)
+public void take(int number) {}
+public void take(String str, int number) {}
+public void take(int number, String str) {}
+
+X. 리턴 타입은 오버로드 대상이 아님
+```
 
 <a href="https://github.com/HyeranShin/FastCampus/tree/master/Constructor/src/com/hyeran/constructor">Constructor</a>
 - constructor
@@ -136,7 +152,7 @@ Java Stack: 함수 내에서 사용되는 변수 값과 리턴 값들이 저장
 클래스 자원(멤버 함수, 멤버 변수) 사용하는 방법
 
 1. new 연산자
-  * new 연산자를 사용했을 때 heaq으로 로드되면서 사용 가능한 상태가 됨
+  * new 연산자를 사용했을 때 heap으로 로드되면서 사용 가능한 상태가 됨
   * 코드 자체는 code area에 올라가 있지만 사용 가능한 상태는 아님
   * 장점: 공간 효율 ↑ - 사용할 때만 메모리 생성
   * 단점: 처리 속도 ↓
