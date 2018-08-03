@@ -52,10 +52,58 @@
 <a href="https://github.com/HyeranShin/FastCampus/tree/master/Loop/src/com/hyeran/loop">Loop</a>
 - for
 - 중첩 for
-- 구구단 출력하기
-- break_continue
-- while_dowhile
 - 배열에서 반복문 사용하기
+```JAVA
+for (int index=0; index < array.length; index = index+1) { }
+cf) 문자열.length(), 배열.length
+
+향상된 for문
+array의 개수만큼 반복하면서 반복할 때 마다 증가된 인덱스의 값을 변수에 담는다.
+for (int item : array) {}
+
+무한 루프
+for ( ; ; ) {}
+```
+- 구구단 출력하기
+```JAVA
+println: 줄을 바꿔주는 역할
+printf: 특수 문자와 변수를 치환해주는 역할
+```
+- break_continue
+```JAVA
+break: for문 종료
+continue: 해당 조건만 생략
+
+레이블을 이용해서 내부 for문에서 외부 for문 제어 가능
+레이블명 : for() {
+    for() {
+        break 레이블명;
+    }
+}
+
+out : for(int a = hegin; a <= end; a = a+1) {
+   for(int b = 1; b <= offset; b = b+1) {
+       1. if (b > 7) break;      // 7 이후 출력 X
+       2. if (b == 7) continue;  // 7만 생략
+       3. if (b == 7) break out; // 외부 for문 종료
+   }
+}
+```
+- while_dowhile
+```JAVA
+while: for문과 달리 시작 값과 종료 값이 명확하지 않거나 증감이 일정하지 않을 때 사용
+
+1. while
+while (조건식) {
+    // 반복할 코드
+}
+
+2. do-while
+조건에 상관없이 코드가 한 번은 실행되어야 하는 경우
+do {
+    // 반복할 코드
+} while (조건식);
+```
 
 ### 8. Algorithm 문제 풀기
 <a href="https://github.com/HyeranShin/FastCampus/tree/master/Algorithm/src/com/hyeran/algorithm">Algorithm</a>
@@ -68,13 +116,13 @@
 - Class_2
 - Class_3
 - Class_4
-```
+```JAVA
 설계: 객체들의 이름을 나열하고 이들의 관계를 구성하는 것
 코딩: 설계에서 만들어진 이름으로 자바 파일을 생성하고 코드를 채워 나가는 것
 객체: 앞으로 작성할 코드를 내가 이해할 수 있게 이름을 부여하는 것
 클래스: 부여한 이름에 맞춰서 코드를 작성한 것
 ```
-```Java
+```JAVA
 객체(Object)는 속성(Attribute)과 기능(Method)를 가지는 대상
   
 예시1. 사람
@@ -104,18 +152,31 @@ class Person() {
 기능: 좌회전, 우회전, 기어 변속, 문 열기, 후진, 창문 열기
 ```
 - 클래스와 인스턴스     
-```
+```JAVA
+JVM 메모리
+
 Method Area: 모든 코드와 static 변수, 상수 정보 등이 저장
-Heap: new 연산자로 생성된 모든 instance가 저장
+  * Code Area, Class Area, Static Area로도 불림
+Heap: new 연산자로 생성된 모든 Instance가 저장
   * new를 하면 클래스 코드는 heap에 따로 저장되지 않고 Method Area에 있는 것을 가져다 사용
-  * heap에는 class의 멤버 변수만 저장
+  * heap에는 클래스의 멤버 변수만 저장
 Java Stack: 함수 내에서 사용되는 변수 값과 리턴 값들이 저장
   * 함수는 호출 후 종료되면 내부에서 선언되었던 값들이 사라지기 때문에 다른 영역 사용
+```
+```JAVA
+Instance: Heap에 로드된 상태
+
+Obejct(객체)가 개념적이라면, Class는 구체적
+Instance가 붕어빵이라면, Class는 붕어빵을 만드는 틀
+
+Object   <= 개념(설계)
+Class    <= 구현체(코드화)
+Instance <= 실행체(new Class)
 ```
 
 <a href="https://github.com/HyeranShin/FastCampus/tree/master/Function/src/com/hyeran/function">Function</a>
 - Function
-```
+```JAVA
 함수에 값 넘길 때 명칭: 입력 시 argument, 정의 시 parameter
 ```
 - overload
@@ -136,7 +197,7 @@ X. 리턴 타입은 오버로드 대상이 아님
 
 <a href="https://github.com/HyeranShin/FastCampus/tree/master/Constructor/src/com/hyeran/constructor">Constructor</a>
 - constructor
-```
+```JAVA
 생성자: 클래스 호출 시 자동으로 불리는 함수
   * 클래스의 이름과 함수의 이름이 같음 (대문자로 시작)
   * 리턴 타입이 없는 함수 ex) public One() {}
@@ -149,12 +210,12 @@ X. 리턴 타입은 오버로드 대상이 아님
 <a href="https://github.com/HyeranShin/FastCampus/blob/master/UsingClass/src/com/hyeran/using/UsingMain.java">UsingClass</a>
 - new와 static으로 보는 메모리(1)
 - new와 static으로 보는 메모리(2)
-```
+```JAVA
 클래스 자원(멤버 함수, 멤버 변수) 사용하는 방법
 
 1. new 연산자
-  * new 연산자를 사용했을 때 heap으로 로드되면서 사용 가능한 상태가 됨
-  * 코드 자체는 code area에 올라가 있지만 사용 가능한 상태는 아님
+  * new 연산자를 사용했을 때 Heap으로 로드되면서 사용 가능한 상태가 됨
+  * 코드 자체는 Code Area에 올라가 있지만 사용 가능한 상태는 아님
   * 장점: 공간 효율 ↑ - 사용할 때만 메모리 생성
   * 단점: 처리 속도 ↓
   
