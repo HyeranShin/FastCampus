@@ -37,8 +37,6 @@ public class DataType {
 		float type_float = 3.141592F;			// 4byte
 		double type_double = 3.141592;	// 8byte
 		
-		System.out.println(type_double);
-		
 		// 5. String
 		String str = "안녕하세요";
 		
