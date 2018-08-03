@@ -8,8 +8,7 @@ public class StringMain {
 
 	public static void main(String[] args) {
 
-		// 문자열 비교
-		// equals
+		// 1. 문자열 비교 - equals
 		String eq1 = "Aaa";
 		String eq2 = "AAa";
 		

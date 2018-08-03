@@ -16,11 +16,13 @@ public class TypeCasting {
 		
 		// 1. 기본형 변환
 		long a = 35;
+//		int b = a; 오류
 		int b = (int)a;
 		
 		byte b1 = 15;
 		byte b2 = 27;
 		
+//		byte b3 = b1 + b2; 오류
 		byte b3 = (byte)(b1 + b2);
 		
 		// 2. 숫자 -> 문자변환
