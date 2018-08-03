@@ -5,6 +5,13 @@
 <a href="https://github.com/HyeranShin/FastCampus/tree/master/TestProject/src/com/hyeran/testproject">TestProject</a>
 - 새 프로젝트 생성 및 테스트
 - 이클립스 한글처리
+```
+1. 깨지는 것 대비
+Window > Preferences > General > Workspace > Text file encoding > utf-8
+
+2. 글자 폰트 변경
+Window > Preferences > General > Colors and Fonts > Basic > Text Font
+```
 - 프로젝트 구조
 - 패키지
 - 클래스
@@ -13,22 +20,149 @@
 ### 3. 코딩 규칙 및 변수 다루기
 <a href="https://github.com/HyeranShin/FastCampus/tree/master/CodingRule/src/com/hyeran/codingrule">CodingRule</a>
 - 코드 작성 규칙
+```
+1. 패키지 이름: 모두 소문자로
+
+2. 클래스 이름: 낙타 표기법
+  * 영어 단어: 첫번째 글자는 대문자, 두번째 글자부터는 소문자로
+  * 복합 단어: 두번째 혹은 세번째 명사의 첫번째 글자를 대문자로
+  
+3. 함수 이름: 낙타 표기법-첫번째 글자 소문자로
+
+4. 세미콜론: 문장의 끝, 줄의 끝에 세미콜론(;) 입력
+
+5. 블럭(scope): 하나의 영역으로 내부에 선언된 변수나 함수들은 동일한 영역에서 실행되는 것으로 간주
+
+6. 칸 띄우기(space): 연속된 칸 띄우기는 하나의 공간으로 인식
+
+7. 주석: 개발자가 알아보기 위해서 부가적인 정보를 적어 넣는 것
+   7.1 한줄 주석 처리
+   // 안녕
+   7.2 여러 줄 주석 처리
+   /* 안
+    * 녕
+    */
+   7.3 Java 문서를 만들 때 사용하는 주석
+   /**
+    * 클래스에 대한 설명
+    */
+    
+8. 식별자
+   * 첫번째 글자로는 영문, 한글, 밑줄(_), 달러($)만 사용 가능 (영문만 사용할 것 권장)
+   * 키워드는 식별자로 사용 불가능
+   * 낙타 표기법 
+```
 - 들여쓰기
 
 <a href="https://github.com/HyeranShin/FastCampus/blob/master/VariableConstant/src/com/hyeran/variableconstant/VariableConstant.java">VariableConstant</a>
 - 변수와 상수
+```JAVA
+1. 변수: 타입 변수이름;
+int number = 57;
+
+2. 상수: 변수와 유사하나 값 변경 불가능, 보통 대문자로 작성
+final double PI = 3.141592;
+```
 
 <a href="https://github.com/HyeranShin/FastCampus/tree/master/DataType/src/com/hyeran/datatype/DataType.java">DataType</a>
 - 자료형
+```JAVA
+데이터 타입: 변수에 담을 값의 크기를 결정하는 표식
+
+가. 기본형(primitive type): 값이 저장될 수 있는 공간의 크기가 정해져 있다.
+1. 논리형
+boolean type_boolean = true;
+
+2. 문자형
+char type_char = '값';
+
+3. 정수형
+byte type_byte = 127;      // 1byte: -128~127
+short type_short = 32767;  // 2byte: -32768~32767
+int type_int = 23132123;   // 4byte: ~2147483647
+long type_long = 1312312154654L;    // 8byte: ~9223372036854775807
+* 모든 숫자 값을 int로 인식하므로 long 타입이더라도 숫자 값이 int의 범위를 넘어서면 L을 붙여서 long 타입이라는 것을 
+   알려주어야 함
+
+4. 실수형
+float type_float = 3.141592F;   // 4byte
+double type_double = 3.141592;  // 8byte
+
+5. String
+String str = "안녕하세요";
+
+나. 참조형(reference type): 값이 저장될 수 있는 공간의 크기가 변할 수 있음
+클래스: 대표적으로 문자열을 저장하는 String 클래스가 있음
+```
 
 <a href="https://github.com/HyeranShin/FastCampus/tree/master/ArrayType/src/com/hyeran/arraytype/ArrayType.java">ArrayType</a>
 - 배열
+```JAVA
+선언하는 방법: int[] array; 혹은 int array[];
+
+가. 선언과 동시에 초기화
+int array[] = new int[5];
+
+나. 선언한 후에 초기화
+int array[];
+array = new int[5];
+
+다. 값으로 초기화
+String array[] = {"월요일", "화요일", "수요일", "목요일", "금요일", "토요일", "일요일"};
+```
 
 <a href="https://github.com/HyeranShin/FastCampus/tree/master/TypeCasting/src/com/hyeran/typecasting/Typecasting.java">TypeCasting</a>
 - 타입캐스팅
+```JAVA
+자료형 변환이 필요한 이유
+1. 큰 자료형을 작은 자료형에 넣을 수 없음
+2. 정수형 연산의 결과 값은 int 임
+3. 문자 10과 숫자 10은 다름
+
+가. 기본형 변환
+long a = 35;
+[X] int b = a;
+[O] int b = (int)a;
+
+byte b1 = 15;
+byte b2 = 27;
+[X] byte b3 = b1 + b2;
+[O] byte b3 = (byte)(b1 + b2);
+
+나. 숫자 -> 문자 변환
+String numStr = String.valueOf(num);
+String numStr = num + "";
+// 활용법) 자릿수 알아내기: numStr.length();
+
+다. 문자 -> 숫자 변환
+long result = Long.parseLong(str);
+double result = Double.parseLong(str);
+int result = Integer.parseInt(str);
+```
 
 <a href="https://github.com/HyeranShin/FastCampus/tree/master/Operator/src/com/hyeran/operator/Operator.java">Operator</a>
 - 연산자
+```
+1. 대입 연산자 =
+
+2. 산술 연산자 * / + - %(모드: 나머지 연산자)
+
+3. not 연산자 !(연속해서도 사용 가능(!!!))
+
+4. 관계 연산자 == > < != !!!
+   * 비교 연산자(==)와 대입 연산자(=) 구분
+   
+5. 논리 연산자
+   AND(&&): 두 항이 모두 참이면 참 리턴
+   OR(||): 두 항 중 하나라도 참이면 참 리턴
+   * short-circuit
+   가. A && B: A가 false이면 B의 값을 확인하지 않음
+   나. A || B: A가 true이면 B의 값을 확인하지 않음
+   
+6. 삼항 연산자
+조건식? 값1(true) : 값2(false);
+pass = (english_score > cut_line)? true : false;
+```
 
 ### 4. Eclipse Run
 - run 버튼
@@ -303,6 +437,17 @@ X. 리턴 타입은 오버로드 대상이 아님
 ```
 
 ### 11. 내장 객체와 라이브러리
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/Builtin/src/com/hyeran/builtin/Builtin.java">Builtin</a>
 - 내장 객체, 내장 함수, 라이브러리
+```
+내장 클래스: System, String처럼 Java에 이미 만들어져 있는 클래스로 바로 가져다 사용 가능
+내장 함수 
+  ex) println(), length(), indexOf(), Math.ceil(), Math.floor(), Math.round()
+라이브러리
+  * Java에 기본적으로 포함되지 않는 클래스
+  * 주로 3rd party 개발자들이 만들어서 제공
+  * 라이브러리 형태로 파일을 다운받아서 
+```
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/SystemOut/src/com/hyeran/systemout/OutMain.java">SystemOut</a>
 - System.out은 어떻게 만들어져 있을까?
 - StringBuffer와 StringBuilder
