@@ -39,13 +39,89 @@
 <a href="https://github.com/HyeranShin/FastCampus/tree/master/String/src/com/hyeran/string">String</a>
 - 자주 사용되는 String 함수 (1)
 - 자주 사용되는 String 함수 (2)
+```JAVA
+1. 문자열 비교: equals
+   대소문자 구분하지 않고 비교: equalsignoreCase
+   'A'.equals('A');
+   
+2. 문자열 합치기: concat
+   "안녕".concat("하세요");
+   
+3. 문자열 길이(공백 포함): length 
+   str.length();
+   
+4. 시작 또는 마지막 문자: startsWith, endsWith
+   name.startsWith("김");
+   
+5. 특정 위치의 문자 반환: charAt
+   name.charAt(0);
+   
+6. 문자열 교체: replace, replaceAll  
+   str.replace('A', 'B');
+   
+7. 구분자로 문자열 분리: split
+   str.split(" ");
+    
+8. 특정 위치의 문자열 추출: substring
+      A   B   C   D   E
+    0   1   2   3   4   5
+   str.substring(3, 5);
+   
+9. 문자열 검색
+   indexOf: 인덱스 위치 반환, 문자열이 없으면 -1을 리턴
+   contains: 리턴 타입이 boolean(true or false)
+   str.indexOf("37");
+   str.contains("37");
+   
+10. 공백 제거: trim
+    * 처음이나 마지막 공백만 제거
+    * 중간의 공백을 제거하고 싶으면 replaceAll(" ", "") 사용
+    " 안녕하세요! ".trim();
+    
+11. 대소문자 변환(영문에만 해당): toLowerCase, toUpperCase
+    "abc".toUpperCase();
+```
 - 문자열 함수 사용 예 (로그인 처리)
 
 ### 6. 조건문 (<a href="https://github.com/HyeranShin/FastCampus/blob/master/Condition/java%20%EC%A0%9C%EC%96%B4%EB%AC%B8.pdf">pdf</a>)
 <a href="https://github.com/HyeranShin/FastCampus/tree/master/Condition/src/com/hyeran/condition">Condition</a>
 - if
 - switch
+```JAVA
+switch의 기본 구조
+
+switch(변수) {
+case 1:
+    // 실행코드
+    break;
+case 2:
+    // 실행코드
+    break;
+case 3:
+    // 실행코드
+    break;
+...
+위의 모든 casd와 매치되지 않을 경우 default의 코드 실행
+default:
+    // 실행코드
+}
+```
 - switch문에서 break 없애기
+```JAVA
+break를 붙이는 이유: 특정 값을 충족하면 이후에 나오는 모든 case문 실행
+
+이를 활용하는 법
+switch(A) {
+case 1:
+case 2:
+    System.out.println("3 미만 입니다.");
+    break;
+case 3:
+case 4:
+case 5:
+    System.out.println("3 이상 입니다.");
+    break;
+```
 - if와 switch, 어떤게 좋을까?
 
 ### 7. 반복문 
@@ -55,7 +131,7 @@
 - 배열에서 반복문 사용하기
 ```JAVA
 for (int index=0; index < array.length; index = index+1) { }
-cf) 문자열.length(), 배열.length
+// cf) 문자열.length(), 배열.length
 
 향상된 for문
 array의 개수만큼 반복하면서 반복할 때 마다 증가된 인덱스의 값을 변수에 담는다.
@@ -65,7 +141,7 @@ for (int item : array) {}
 for ( ; ; ) {}
 ```
 - 구구단 출력하기
-```JAVA
+```
 println: 줄을 바꿔주는 역할
 printf: 특수 문자와 변수를 치환해주는 역할
 ```
@@ -116,7 +192,7 @@ do {
 - Class_2
 - Class_3
 - Class_4
-```JAVA
+```
 설계: 객체들의 이름을 나열하고 이들의 관계를 구성하는 것
 코딩: 설계에서 만들어진 이름으로 자바 파일을 생성하고 코드를 채워 나가는 것
 객체: 앞으로 작성할 코드를 내가 이해할 수 있게 이름을 부여하는 것
@@ -152,7 +228,7 @@ class Person() {
 기능: 좌회전, 우회전, 기어 변속, 문 열기, 후진, 창문 열기
 ```
 - 클래스와 인스턴스     
-```JAVA
+```
 JVM 메모리
 
 Method Area: 모든 코드와 static 변수, 상수 정보 등이 저장
@@ -163,7 +239,7 @@ Heap: new 연산자로 생성된 모든 Instance가 저장
 Java Stack: 함수 내에서 사용되는 변수 값과 리턴 값들이 저장
   * 함수는 호출 후 종료되면 내부에서 선언되었던 값들이 사라지기 때문에 다른 영역 사용
 ```
-```JAVA
+```
 Instance: Heap에 로드된 상태
 
 Obejct(객체)가 개념적이라면, Class는 구체적
@@ -176,7 +252,7 @@ Instance <= 실행체(new Class)
 
 <a href="https://github.com/HyeranShin/FastCampus/tree/master/Function/src/com/hyeran/function">Function</a>
 - Function
-```JAVA
+```
 함수에 값 넘길 때 명칭: 입력 시 argument, 정의 시 parameter
 ```
 - overload
@@ -197,7 +273,7 @@ X. 리턴 타입은 오버로드 대상이 아님
 
 <a href="https://github.com/HyeranShin/FastCampus/tree/master/Constructor/src/com/hyeran/constructor">Constructor</a>
 - constructor
-```JAVA
+```
 생성자: 클래스 호출 시 자동으로 불리는 함수
   * 클래스의 이름과 함수의 이름이 같음 (대문자로 시작)
   * 리턴 타입이 없는 함수 ex) public One() {}
@@ -210,7 +286,7 @@ X. 리턴 타입은 오버로드 대상이 아님
 <a href="https://github.com/HyeranShin/FastCampus/blob/master/UsingClass/src/com/hyeran/using/UsingMain.java">UsingClass</a>
 - new와 static으로 보는 메모리(1)
 - new와 static으로 보는 메모리(2)
-```JAVA
+```
 클래스 자원(멤버 함수, 멤버 변수) 사용하는 방법
 
 1. new 연산자
