@@ -441,8 +441,10 @@ X. 리턴 타입은 오버로드 대상이 아님
 - 내장 객체, 내장 함수, 라이브러리
 ```
 내장 클래스: System, String처럼 Java에 이미 만들어져 있는 클래스로 바로 가져다 사용 가능
+
 내장 함수 
   ex) println(), length(), indexOf(), Math.ceil(), Math.floor(), Math.round()
+  
 라이브러리
   * Java에 기본적으로 포함되지 않는 클래스
   * 주로 3rd party 개발자들이 만들어서 제공
@@ -450,4 +452,76 @@ X. 리턴 타입은 오버로드 대상이 아님
 ```
 <a href="https://github.com/HyeranShin/FastCampus/tree/master/SystemOut/src/com/hyeran/systemout/OutMain.java">SystemOut</a>
 - System.out은 어떻게 만들어져 있을까?
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/StringReview/src/com/hyeran/stringreview/StringMain.java">StringMain</a>
 - StringBuffer와 StringBuilder
+```
+문자열 더하기 연산을 할 때
+직접 연산 시 메모리 낭비 -> cpu 성능 하락 -> 속도 저하
+
+해결방법: 문자열 연산을 위해 제공되는 클래스 사용
+
+1. StringBuffer
+  * 글자 수가 많을 경우 직접 연산보다 최대 3000배 이상도 빨라짐
+  
+2. StringBuilder
+  * StringBuffer보다 빠름
+  * 하지만 Multi-Thread인 경우 동기화가 보장되지 않음 
+     -> 서버 프로그램 제작이나 채팅 앱의 경우 무조건 StringBuffer를 써야 함
+   * Single-Thread에서는 가장 좋은 방법
+   
+최신 버전의 자바에서는 문자열의 단순 더하기 연산은 StringBuilder로 자동 변환해서 처리
+하지만 Builder가 판단하기 어려운 복잡한 연산일 경우 자동 변환되지 않음
+그러므로 문자열을 더하는 경우 더하기 연산을 쓰는 것 보다는 StringBuilder를 쓰는 게 바람직
+```
+
+### 12. 첫번째 프로젝트
+- Random 클래스를 이용한 로또 번호 추출기
+
+### 13. 코드 관리
+- Git 기본
+- Git 설치 및 Github 업로드(Window)
+- Git 설치 및 Github 업로드(mac OS)
+
+### 14. 상속이란?
+- inheritance_상속이란?
+- inheritance_다단상속
+- override
+- protected_접근제한자
+- polymorphism_다형성
+- polymorphism_다형성 코드
+
+### 15. 객체지향 설계 도구
+- interface
+- abstract
+- annotation
+- inner class
+
+### 16. 예외처리
+- exception
+- finally
+
+### 17. 키보드 입력 처리
+- Scanner와 System.in -입력 클래스 사용
+
+### 18. 두번째 프로젝트
+- 계산기 만들기 -라이브러리 활용
+
+### 19. 컬렉션
+- list
+- 컬렉션을 위한 Generic
+- set (1)
+- set (2)
+- map
+
+### 20. 파일 읽고 쓰기
+- File IO 설명
+- File
+- FileInputStream
+- FileOutputStream
+- InputStream 한글 처리
+- BufferedInputStream
+- BufferedOutputStream
+- IO Package
+- Reader & Writer
+- Path
+
