@@ -475,6 +475,7 @@ X. 리턴 타입은 오버로드 대상이 아님
 ```
 
 ### 12. 첫번째 프로젝트
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/ProjectLotto">ProjectLotto</a>
 - Random 클래스를 이용한 로또 번호 추출기
 
 ### 13. 코드 관리
