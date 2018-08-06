@@ -513,9 +513,12 @@ Git 로컬 저장소 생성
 > git add -A / git add 파일명: git 저장소에 등록할 파일들을 먼저 준비 단계인 stage에 등록
 > git commit -m "(commit message)": stage에 등록된 파일을 git 저장소에 등록
 
-로컬 Git 저장소에 등록해놓은 파일들을 온라인 사이트에 업로드
-> git remote add origin "(저장소 주소)": 연결
-> git push -u origin master: 업로드
+로컬 git 저장소를 온라인 사이트와 연결
+> git remote add origitn https://github.com/계정이름/저장소이름.git
+확인
+> git remote -v
+로컬 git 저장소를 온라인 사이트에 업로드
+> git push -u origin master
 
 변경 사항 반영
 > git add -A
