@@ -480,13 +480,72 @@ X. 리턴 타입은 오버로드 대상이 아님
 
 ### 13. 코드 관리
 - Git 기본
+```
+Git: Version Control System, 파일의 버전을 관리해주는 관리 도구
+1. 프로그래밍 리소스(소스코드, 이미지 파일 등)의 변화를 시간에 따라 기록
+2. 과거 특정 시점의 리소스 복원 가능
+3. VCS(Version Control System) 중에 가장 많이 사용
+
+VCS 종류
+가. CVCS(Central Version Control System): 중앙 집중식 버전 관리
+- 대표적인 CVCS로는 Java 프로젝트에서 가장 많이 사용되는 SVN
+- 보안상 이유로 대형 SI 프로젝트의 경우 내부에 SVN 서버를 설치하고 사설망 내에서 서버 관리
+나. DVCS(Distributed Version Control System): 분산 버전 관리
+- 이 DVCS에 해당되는 대표적인 시스템이 바로 Git
+```
 - Git 설치 및 Github 업로드(Window)
 - Git 설치 및 Github 업로드(mac OS)
+```
+Git Config
+1. git을 설치하고 가장 먼저 해야 하는 작업
+2. GUI 툴들은 처음 실행할 때 이 설정을 물음
+3. 앞으로 github에 가입할 이메일 주소 등록 권장
+> git config --global user.name "이름"
+> git config --global user.email "github 이메일 주소"
+
+확인
+> git config --list
+
+Git 로컬 저장소 생성
+1. 탐색기에서 git에 저장할 디렉토리 열기
+2. 프로젝트 우클릭 -> 팝업 메뉴에서 git bash 선택
+> git init: 현재 디렉토리의 파일을 관리하는 git 저장소 생성
+> git add -A / git add 파일명: git 저장소에 등록할 파일들을 먼저 준비 단계인 stage에 등록
+> git commit -m "(commit message)": stage에 등록된 파일을 git 저장소에 등록
+
+로컬 Git 저장소에 등록해놓은 파일들을 온라인 사이트에 업로드
+> git remote add origin "(저장소 주소)": 연결
+> git push -u origin master: 업로드
+
+변경 사항 반영
+> git add -A
+> git commit -m "(commit message)"
+> git push -u origin master
+```
+
 
 ### 14. 상속이란?
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/Inheritance/src/com/hyeran/inheritance/InheritMain.java"
 - inheritance_상속이란?
 - inheritance_다단상속
+```
+상속
+  * 부모 클래스에 정의된 것을 상속받은 자식 클래스가 사용 가능
+  * 상속 관계에서의 호출 순서: 부모 클래스가 생성된 후에 자식 클래스가 생성 
+     -> 메모리에 적층되는 원리, 최상위 부터 상속 받은 순서대로 실행
+  * 상속을 받기 위해서는 extends 예약어 사용
+  * 다단 상속 가능, 다중 상속 불가능
+```
 - override
+```
+오버라이드
+  * 상속 관계에서 자식에 선언된 자원을 사용하기 위해 쓰임
+  * 부모 클래스의 함수와 같은 이름의 함수를 자식 클래스에 정의
+
+super 예약어: 부모 클래스에 있는 대상 식별자를 가진 자원 사용
+
+this 예약어: 상속 여부에 상관 없이 내 클래스 블럭 내에 있는 자원 사용
+```
 - protected_접근제한자
 - polymorphism_다형성
 - polymorphism_다형성 코드
