@@ -525,7 +525,7 @@ Git 로컬 저장소 생성
 
 
 ### 14. 상속이란?
-<a href="https://github.com/HyeranShin/FastCampus/tree/master/Inheritance/src/com/hyeran/inheritance/InheritMain.java"
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/Inheritance/src/com/hyeran/inheritance/InheritMain.java">Inheritance</a>
 - inheritance_상속이란?
 - inheritance_다단상속
 ```
