@@ -28,12 +28,6 @@ public class InheritMain {
 		// ~보다 더 중요하다
 		// 상속 관계에서 자식에 선언된 자원을 사용하기 위해 쓰임
 		// 부모 클래스의 함수와 같은 이름의 함수를 자식 클래스에 정의
-		
-		// 3. protected 접근제한자
-		
-		// 4. 다형성 polymorphism
-		
-		// 5. 내부클래스 inner class
 
 	}
 
