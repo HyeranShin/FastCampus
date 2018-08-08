@@ -590,7 +590,7 @@ interface IDoor { // 인터페이스 이름은 주로 Interface의 약자인 I�
   public void close();
 }
 
-interface 사
+interface 사용 
   * implements 예약어 사용 (상속에서의 extends와 유사하게 사용)
   * interface 내부에 선언한 함수를 모두 구현해야 함
 ```
