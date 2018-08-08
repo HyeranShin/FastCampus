@@ -576,6 +576,24 @@ protected: 다른 패키지에 있더라도 상속을 통해서 사용 가능
 
 ### 15. 객체지향 설계 도구
 - interface
+```Java
+interface
+  * 설계자의 의도대로 기능을 구현하도록 강제하는 것
+  * 설계자가 함수의 이름을 미리 정해놓음
+  * 다형성 적용 가능(한번에 하나만)
+  * 다중 구현 가능
+
+interface 구현
+interface IDoor { // 인터페이스 이름은 주로 Interface의 약자인 I를 붙여서 설계
+  // 함수 선언만 가능, body가 없음
+  public void open();
+  public void close();
+}
+
+interface 사용 
+  * implements 예약어 사용 (상속에서의 extends와 유사하게 사용)
+  * interface 내부에 선언한 함수를 모두 구현해야 함
+```
 - abstract
 - annotation
 - inner class
