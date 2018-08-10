@@ -30,8 +30,45 @@ public class ToolMain {
 		child.close();
 		
 		// 3. annotation
+		// 사전적 의미로 "주석 달기"라는 뜻
+		// 주석 앞에 @을 이용하여 주석을 작성하는 것
+		
+		//주석과 애너테이션의 차이
+		// 1. 주석: 오로지 개발자만 보기 위해 작성하는 비고
+		// 2. 애너테이션: 개발자, 컴파일러, 런타임(실행환경)
+		
+		// @Override: 컴파일러에 정보를 제공 (개발자에게도 알려줌)
+		// 애너테이션의 용도
+		// 가. 컴파일러에 정보 제공
+		// 나. 실행 시간에 특수 기능 제공
+		// 다. 코드 자동 생성
+		
+		AnnoClass anno = new AnnoClass();
+		
+		// anno 변수에서 애너테이션 정보 꺼내기
+		String value = anno.getClass().getAnnotation(Annotation.class).value();
+		System.out.println(value);
+		
+		Class cls = anno.getClass();
+		// 도트 연산자 썼을 때 나오는 함수들에서 콜론 뒤에 나오는 타입이 해당 함수의 리턴 타입
+		Annotation ano = (Annotation) cls.getAnnotation(Annotation.class);
+		String key = ano.key();
+		System.out.println(key);
+		
 	}
+	
 }
+
+/* 애너테이션 사용하기 */
+
+@Annotation(key = "추가된 키의 값")
+class AnnoClass {
+	
+}
+
+
+
+/* abstract 사용하기 */
 
 // 1. abstract 만들기
 
@@ -63,7 +100,7 @@ class AbstractChild extends Abstract {
 
 
 
-
+/* interface 사용하기 */
 
 // 1. 인터페이스 만들기
 // 인터페이스 이름은 주로 Interface의 약자인 I를 붙여서 설계
