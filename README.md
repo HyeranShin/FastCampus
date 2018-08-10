@@ -595,7 +595,70 @@ interface 사용
   * interface 내부에 선언한 함수를 모두 구현해야 함
 ```
 - abstract
+```Java
+abstract (추상 클래스, 추상 함수)
+  * 설계자의 의도대로 기능을 구현하도록 강제하는 것
+  * 설계자가 미리 정해놓은 함수 이름 + 로직(연산이 일어나는 코드)
+  * 초기화 할 수 없음. 상속을 통해서만 사용 가능
+  
+abstract 구현
+abstract class Abstract {
+  abstract public void open();  // 상속받은 클래스에서 반드시 구현해야 함
+  
+  public void close() {  // 일반 함수도 만들 수 있음
+    System.out.println("문이 닫혔습니다.");
+  }
+}
+
+abstract 사용 > 상속과 동일
+```
 - annotation
+```Java
+annotation
+  * 사전적 의미로 '주석 달기'라는 뜻
+  * 주석 앞에 @을 이용하여 주석 작성
+  
+주석과 annotation의 차이
+주석: 오로지 개발자만 보기 위해 작성하는 비고
+애너테이션: 개발자, 컴파일러, 런타임(실행환경)
+ex) @Override: 컴파일러에 정보 제공(개발자에게도 알려줌)
+
+annotation 용도
+가. 컴파일러에 정보 제공
+나. 실행 시간에 특수 기능 제공
+다. 코드 자동 생성
+
+annotation 설계
+1. Target: 적용할 대상(생성자, 변수, 함수, 패키지, 클래스)
+2. Retention: 정보의 유지 단계(소스 코드, 컴파일, 실행 시간)
+3. Documented: 문서화 되어야 하는 애너테이션일 경우 사용
+4. Inheritated: 자동으로 상속받는 애너테이션 타입일 경우
+
+@Target(ElementType.TYPE)  // TYPE=클래스(클래스의 또 다른 이름은 사용자 정의 타입)
+@Retention(RetentionPolicy.RUNTIME)
+public @interface Annotation {
+  public String value() default "어떤 값";  // val이라는 함수가 실행되면 defult로 "어떤 값"이 return
+  
+  public String key();
+  
+  // public String aaa; (X) 변수 선언만은 불가능. 초기화 하면 가능
+}
+
+annotation 사용
+@Annotation(key = "추가된 키의 값")
+class AnnoClass {
+}
+
+annotation 정보 꺼내기
+AnnoClass anno = new AnnoClass();
+
+1. String value = anno.getClass().getAnnotation(Annotation.class).value();
+
+2. Class cls = anno.getClass();
+// 도트 연산자 썼을 때 나오는 함수들에서 콜론 뒤에 나오는 타입이 해당 함수의 리턴 타입
+Annotation ano = (Annotation) cls.getAnnotation(Annotation.class);
+String key = ano.key();
+```
 - inner class
 
 ### 16. 예외처리
