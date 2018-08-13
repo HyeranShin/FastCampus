@@ -660,6 +660,37 @@ Annotation ano = (Annotation) cls.getAnnotation(Annotation.class);
 String key = ano.key();
 ```
 - inner class
+```Java
+inner class: 클래스 내부에 정의하는 클래스
+
+종류
+1. 멤버 클래스
+2. static 클래스
+3. local 클래스: 함수 안에 정의
+4. 익명 클래스: 단독으로 실행되는 클래스. 주로 interface를 구현하는 형태로 정의
+
+1. 이너클래스 
+  * 이너클래스에서 static으로 된 멤버 사용 불가. 단, final은 제외
+  * 외부 멤버 이름 사용 가능
+  * 일반 이너클래스에서는 외부 클래스의 모든 자원을 자기 것처럼 사용 가능
+  
+이너클래스 사용하기
+Outer out = new Outer();
+Outer.Inner in = out.new Inner(); // 외부 클래스를 통해서 new 연산자 사용 가능
+
+2. static 이너클래스 
+  * 외부 클래스의 static 멤버만 사용 가능
+
+static 이너클래스 사용하기
+Common.Inner in2 = new Common.Inner();
+
+3. 지역(Local) 이너클래스
+  * 멤버, 자신을 포함하고 있는 함수의 지역 변수 등 모든 영역의 변수에 접근 가능
+  
+4. 익명 클래스
+  * 독립적으로 만들어지는 내부 클래스
+  * 주로 인터페이스의 구현체로 코딩
+```
 
 ### 16. 예외처리
 - exception
