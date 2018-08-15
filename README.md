@@ -575,6 +575,7 @@ protected: 다른 패키지에 있더라도 상속을 통해서 사용 가능
 ```
 
 ### 15. 객체지향 설계 도구
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/Design%20Tools/src/com/hyeran/tools">Design Tools</a>
 - interface
 ```Java
 interface
@@ -659,6 +660,7 @@ AnnoClass anno = new AnnoClass();
 Annotation ano = (Annotation) cls.getAnnotation(Annotation.class);
 String key = ano.key();
 ```
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/InnerClass/src/com/hyeran/innerclass/InnerMain.java">InnerClass</a>
 - inner class
 ```Java
 inner class: 클래스 내부에 정의하는 클래스
@@ -693,8 +695,38 @@ Common.Inner in2 = new Common.Inner();
 ```
 
 ### 16. 예외처리
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/Exception/src/com/hyeran/exception">Exception</a>
 - exception
 - finally
+```Java
+예외 처리의 기본 구조
+
+try {
+  // 예외가 발생할 수 있는 코드
+} catch(Exception e) {
+  e.printStackTrace();
+  // printStackTrace는 내부적으로 제 3의 thread에서 동작하기 때문에 로그와 그 다음 코드의 순서는 달라질 수 있음
+} finally {
+  // 예외가 발생하더라도 무조건 실행
+  System.out.println("프로그램 정상 종료.");
+  
+  // 대표적으로 파일이나 네트워크 처리 시 try문에서 연결한 연결점을 꼭 닫아줘야 함
+}
+
+Exception(예외) 종류
+
+1. CheckedException
+  * 예외가 발생했을 때 코드 상에서 처리 가능
+  * 예외도 하나의 객체로서 발생하는데, CheckedException은 자바에 이미 정의되어 있음
+  * 하나의 블럭에서 여러 예외 처리 시 catch문 중복해서 사용 가능
+     -> 문제: 앞의 코드에서 예외 발생 시 예외 처리를 하고 나면 뒤의 코드는 실행 되지 않음
+  * 다형성을 사용하여 Exception 하나로 처리 가능
+  ex) ArithmeticException, ArrayIndexOutOfBoundsException, NullPointerException
+  
+2. UncheckedException - RuntimeException
+  * 예외가 발생했을 때 코드 상에서 처리 불가능
+  * 복구가 불가능한 상황이기 때문에 예외를 발생시키지 않고 종료 처리하기도 함
+```
 
 ### 17. 키보드 입력 처리
 - Scanner와 System.in -입력 클래스 사용
