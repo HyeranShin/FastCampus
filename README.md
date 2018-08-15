@@ -729,10 +729,42 @@ Exception(예외) 종류
 ```
 
 ### 17. 키보드 입력 처리
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/SystemIn/src/com/hyeran/system/in/SystemInMain.java">SystemIn</a>
 - Scanner와 System.in -입력 클래스 사용
+```Java
+Scanner scanner = new Scanner(System.in);
+
+String word = scanner.nextLine(); // 프로그램이 실행된 후 이 코드에서 대기
+```
+```Java
+참고) while문 안의 새로운 블록에서 바깥 블록인 while문 탈출하기
+
+boolean runFlag = true;
+
+while(runFlag) {
+  switch(num) {
+  case 0:
+    runFlag = fale;
+  }
+}
+```
 
 ### 18. 두번째 프로젝트
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/ProjectCalculator/src/com/hyeran/calc/CalcMain.java">ProjectCalculator</a>
 - 계산기 만들기 -라이브러리 활용
+```Java
+// 입력받은 문자열을 계산해주는(식으로 만들어주는) 라이브러리
+ScriptEngineManager manager = new ScriptEngineManager();
+ScriptEngine engine = manager.getEngineByName("javascript");
+
+// javascript.eval(): "문자열을" 코드처럼 처리해줌
+try {
+  Object object = engine.eval(word);
+  System.out.println(object);
+} catch (ScriptException e) {
+  // e.printStackTrace();
+}
+```
 
 ### 19. 컬렉션
 - list
