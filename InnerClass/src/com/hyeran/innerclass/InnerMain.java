@@ -32,8 +32,44 @@ public class InnerMain {
 	}
 
 }
+// 9. 익명 클래스 - 독립적으로 만들어지는 내부 클래스 - 주로 인터페이스의 구현체로 코딩
+class Outer3 {
+	public void init() {
+		
+		// 1. 식별자 없이 사용하는 형태
+		new Anonym() {
+			@Override
+			public void iAmAnonym() {
+				System.out.println("Hello");
+			}
+		}.iAmAnonym();
+		
+		// 2. 식별자가 있는 익명 클래스
+		Anonym anonym = new Anonym() {
+			@Override
+			public void iAmAnonym() {
+				// TODO Auto-generated method stub
+				System.out.println("Hello");
+			}
+		};
+		anonym.iAmAnonym();
+	}
+}
+
+class A implements Anonym {
+	@Override
+	public void iAmAnonym() {
+		// TODO Auto-generated method stub
+	}
+}
+
+interface Anonym {
+	public void iAmAnonym();
+}
+
 
 // 8. 지역(Local) 이너클래스
+// 멤버, 자신을 포함하고 있는 함수의 지역변수 등 모든 영역의 변수에 접근 할 수 있음
 class Local {
 	int outer_variable = 15;
 	public void local() {
@@ -49,9 +85,6 @@ class Local {
 		new Inner().init();
 	}
 }
-
-
-
 
 
 // 6. static 이너클래스
@@ -70,8 +103,6 @@ class Common {
 		}
 	}
 }
-
-
 
 
 // 1. 일반적인 이너클래스의 형태
