@@ -47,11 +47,29 @@ public class CollectionMain {
 		System.out.println("리스트의 최종 길이=" + arrayList.size());
 		System.out.println(arrayList);
 		
-		// 2. Set
+		
+		// 2. Generic 사용하기
+		// 컬렉션에 입력되는 타입을 특정. 컬렉션<타입>
+		
+		// 2.1 입력
+		ArrayList<String> arrayList2 = new ArrayList<>();
+		arrayList2.add("첫번쨰");
+		arrayList2.add("두번째");
+		//arrayList2.add(37, "37");
+		
+		// 2.2 조회
+		String two = arrayList2.get(1);
+		
+		for(String item : arrayList2) {	// generic으로 선언하면 캐스팅 과정이 생략
+			System.out.println("문자열의 길이는 "+item.length());
+		}
+	
+		
+		// 3. Set
 		// List인데, 중복을 허용하지 않는 List
 		
 		// 나. Map은  Map 인터페이스 사용
-		// 3. Map
+		// 4. Map
 		// 키와 값으로 구성된 배열
 
 	}
