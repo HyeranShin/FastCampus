@@ -767,11 +767,87 @@ try {
 ```
 
 ### 19. 컬렉션
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/Collection/src/com/hyeran/collection">Collection</a>
+```Java 
+배열과 컬렉션의 차이
+배열: 정해진 크기를 벗어난 값을 입력할 수 없음
+컬렉션: 정해진 크기가 없고, 값을 계속 넣을 수 있음 (동적 배열)
+
+컬렉션의 종류
+가. List: 배열과 흡사. 배열처럼 index로 접근
+나. Set: List인데, 중복을 허용하지 않는 List
+      -> List와 Set은 Collection 인터페이스 사용
+다. Map: 키와 값으로 구성
+      -> Map은 Map 인터페이스 사용
+   
+***중요
+컬렉션은 꼭 Generic과 함께 쓴다!
+```
 - list
+```Java
+List
+
+0. 정의
+ArrayList arrayList = new ArrayList();
+
+1. 입력 - add(입력할 값)
+  * List에 아무런 처리를 하지 않고 입력하면 Object 타입으로 변환돼서 입력 -> 서로 다른 타입도 입력 가능
+
+2. 조회 - get(index)
+
+3. 수정 - set(index, 수정할 값)
+
+4. 삭제 - remove(index)
+```
 - 컬렉션을 위한 Generic
+```Java
+Generic
+  * 컬렉션에 입력되는 타입을 특정
+  * 컬렉션<타입>
+
+ex) ArrayList<String> arrayList = new ArrayList<>();
+```
 - set (1)
 - set (2)
+```Java
+Set
+  * List와 동일한 Collection 인터페이스를 사용하므로 명령어(함수) 체계가 같음
+  * index가 없음
+  * 중복 값을 허용하지 않음. 중복 값 입력 시 제거
+  * 종류: HashSet, TreeSet(자동 정렬 기능)
+
+0. 정의
+TreeSet<String> set = new TreeSet<>();
+
+1. 입력 - add(입력할 값)
+
+2. 조회
+  * 향상된 반복문을 통해 조회하는 것이 가장 쉽다.
+  * 자동 정렬 되기 때문에 가나다 순으로 출력
+
+3. 삭제 - remove(삭제할 값)
+
+4. 수정 - 삭제+입력
+
++)로또 번호 생성기에서 TreeSet을 이용하면 자동으로 중복을 걸러주므로 중복 코드가 필요 없어서 코드가 짧아짐
+```
 - map
+```Java
+Map
+  * key와 값으로 입력
+  * key로 조회
+  
+0. 정의
+HashMap<String, Integer> map = new HashMap();
+
+1. 입력 - put(key, 입력할 값)
+
+2. 조회 - get(key)
+
+3. 수정 - put(key, 수정할 값)
+
+4. 삭제 - remove(key)
+```
 
 ### 20. 파일 읽고 쓰기
 - File IO 설명
