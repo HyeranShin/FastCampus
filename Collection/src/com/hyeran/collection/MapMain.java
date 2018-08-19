@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 /**
  * Colletion 알아보기 - Map
- * @author hyera
+ * @author hyeran
  *
  */
 public class MapMain {
