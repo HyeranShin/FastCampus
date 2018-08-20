@@ -22,20 +22,26 @@ public class FileMain {
 		useFile.makeFile("/Temp/newDir/new2/file.txt");
 		
 		// 2. Stream 사용
-		// 가. 파일을 읽고 쓴다.
-		// - 일반 변수에 값을 입력하는 법
-		String str = "aaa";
-		// - Stream: 스트림은 일반 변수와 다르게 열고 닫는 과정을 거친다.
-//		FileInputStream fis = new FileInputStream();
-//		fis.open();
-//		fis.write();
-//		fis.close();
-		
+		// 스트림은 일반 변수와 다르게 열고 닫는 과정을 거친다.
+		UseStream stream = new UseStream();
+		// 가. 파일 읽기
+//		String content = stream.read("/Temp/test.txt");
+//		System.out.println(content);
+		// 나. 파일 쓰기
+		// 줄바꿈
+		// Linux: \n, Window: \r\n
+		//String content = "Hello Wordl!!!\r\nGood to see you";
+//		stream.write("/Temp/write.txt", content);
+			
 		// 3. Stream + Buffer 사용
-		// Stream의 처리 속도를 향상시켜 준다. 100배 ~ 100배까지
+		// Stream의 처리 속도를 향상시켜 준다. 100배 ~ 1000배까지
+		UseBuffer buffer = new UseBuffer();
+		String content = buffer.read("/Temp/test.txt");
+		System.out.println(content);
 		
 		// 4. Reader와 Writer 사용
 		// Stream을 쓰기 쉽게 해주는 보조 클래스
+		// 텍스트 파일을 읽고 쓰게 해준다.
 		
 		// 5. Path 사용 - JDK7 이상
 		// Path는 위의 3가지보다 더 간편하게 파일을 처리 할 수 있게 해준다.
