@@ -851,12 +851,179 @@ HashMap<String, Integer> map = new HashMap();
 
 ### 20. 파일 읽고 쓰기
 - File IO 설명
+```
+1. File 클래스 사용
+가. 파일의 정보를 읽는다.
+나. 파일 생성, 디렉토리 생성
+
+2. Stream 사용
+스트림은 일반 변수와 다르게 열고 닫는 과정을 거친다.
+가. 파일 읽기
+나. 파일 쓰기
+
+3. Stream + Buffer 사용
+Stream의 처리 속도를 100배~100배까지 향상시켜준다. 
+
+4. Reader와 Writer 사용
+Stream을 쓰기 쉽게 해주는 보조 클래스
+텍스트 파일을 읽고 쓰게 해준다.
+
+5. Path 사용 - JDK7이상
+Path는 위의 3가지 보다 더 간편하게 파일을 처리할 수 있게 해준다.
+```
 - File
+```Java
+파일의 경로를 File 클래스의 생성자에 넘겨준다.
+경로의 종류: 절대경로, 상대경로(자바가 실행되는 경로부터 시작)
+File file = new File(path);
+
+1. 파일의 정보
+가. 파일 이름: getName
+나. 파일 크기: length
+다. 수정된 날짜: lastModified
+
+// 숫자로 반환된 날짜 - 형식 지정하기
+SimpleDateFormat sdf = new SimpleDataFormat("yyyy-MM-dd hh:mm:ss");
+sdf.format(file.lastModified();
+
+2. 디렉토리 생성
+가. mkdir: 경로 상의 마지막 디렉토리만 생성
+나. mkdirs: 경로 상의 모든 디렉토리 생성 (V 권장)
+
+3. 파일 생성
+createNewFile *try-catch문 필수
+
+4. 파라미터(String path)로 경로를 받아서 파일 생성
+
+  1. 경로 상의 디렉토리를 검사한 후 없으면 생성
+    1.1 디렉토리 문자열 추출
+    // ex) /Temp/newDir/new2/file.txt -> 마지막 /전까지가 디렉토리
+    String dirPath = path.substring(0, path.lastIndexOf("/")
+    1.2 디렉토리가 존재하는지 검사하고 없으면 생성
+    File dir = new File(dirPath);
+    if(!dir.exists()) {
+      dir.mkdirs();
+    }
+
+  2. 파일을 생성
+  createNewFile *try-catch문 필수
+```
 - FileInputStream
+```Java
+파일 읽기
+
+// 파일 생성
+File file = new File(path);
+
+// 파일 스트림 열기
+FileInputStream fis = new FileInputStream(file);
+
+// 한글자씩 담을 변수 선언
+// FileInputStream은 한번에 한글자씩 숫자 값으로 읽어들인다. -> (char) 캐스팅 필요
+int oneChar = 0;
+
+// 반복문을 통해 한글자씩 글자가 없을 때 까지 읽어들인다.
+// 파일의 모든 글자를 다 읽으면 fis.read()가 -1을 return
+방법1
+while((oneChar=fis.read()) != -1) {
+  result = result + (char)oneChar;
+}
+
+방법2
+while(true) {
+  oneChar = fis.read();
+  if(oneChar == -1) break;
+  result = result + (char)oneChar;
+}
+```
 - FileOutputStream
+```Java
+파일 쓰기
+
+File file = new File(path);
+FileOutputStream fos = new FileOutputStream(file);
+
+// write에는 byte 배열을 넘겨줘야함
+fos.write(conten.getBytes());
+```
+```Java
+/*
+ * try - with 문법
+ * try 영역 안에서 오류 여부에 상관 없이 마지막에 fos.close()를 호출 -> finally절 X -> 코드 간편
+ */
+try(FileOutputStream fos = new FileOutputSream(File)) { // 인스턴스가 여러개 일때는 ;로 구분
+      // 코드
+  } catch(FileNotFoundException e) {
+      e.printStackTrace();
+  } catch(IOException e) {
+      e.printStackTrace();
+  }
+}
+
+
+// try - with를 안썼을 때
+FileOutputStream fos = null; // finally 블럭에서 fos를 사용하기 위해 try문 밖에 선언
+try {
+    fos = new FileOutputStream(file);
+    // 코드
+} catch(FileNotFoundException e) {
+    e.printStackTrace();
+} finally {
+    try {
+      fos.close();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+}
+```
 - InputStream 한글 처리
+```Java
+FileInputStream fis = new FileInputStream(file);
+InputStreamReader isr = new InputStreamReader(fis, "utf-8"); // encoding 방식
+isr.read();
+```
 - BufferedInputStream
+```Java
+파일 읽기
+
+// 파일 생성
+File file = new File(path);
+
+// 파일 스트림 열기
+FileInputStream fis = new FileInputStream(file);
+
+BufferedInputStream bis = new BufferedInputStream(fis);
+
+// 한번에 읽어서 담아둘 그릇의 사이즈 정하기
+byte[] basket = new byte[1024];
+while(true) {
+  // 더 이상 읽을 수 없으면 -1 return
+  int flag = bis.read(basket, 0, basket.length);
+  if(flag == -1) break;
+  result = result + new String(basket);
+}
+```
 - BufferedOutputStream
+```Java
+파일 쓰기
+
+File file = new File(path)
+FileOutputStream fos = new FileOutputStream(file)
+
+// 버퍼를 달아준다.
+BufferedOutputStream bos = new BufferedOutputStream(fos);
+bos.write(content.getBytes());
+```
+```Java
++) 
+Stream 인스턴스 사용 할 때 Stream에 바로 path를 전달해도 되는데 File 인스턴스를 통해서 전달하는 이유
+
+우선 파일이 존재하는지 확인하는 전처리를 하기 위해서
+if(file.exist()) {
+  // 여기서 Stream 인스턴스 사용하면서 시작
+}
+```
+![image](https://user-images.githubusercontent.com/38368820/44339277-b9eda900-a4bb-11e8-9be7-efe7ab207270.png)
 - IO Package
 - Reader & Writer
 - Path
