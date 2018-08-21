@@ -514,7 +514,7 @@ Git 로컬 저장소 생성
 > git commit -m "(commit message)": stage에 등록된 파일을 git 저장소에 등록
 
 로컬 git 저장소를 온라인 사이트와 연결
-> git remote add origitn https://github.com/계정이름/저장소이름.git
+> git remote add origin https://github.com/계정이름/저장소이름.git
 확인
 > git remote -v
 로컬 git 저장소를 온라인 사이트에 업로드
