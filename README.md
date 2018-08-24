@@ -867,9 +867,13 @@ Stream의 처리 속도를 100배~100배까지 향상시켜준다.
 4. Reader와 Writer 사용
 Stream을 쓰기 쉽게 해주는 보조 클래스
 텍스트 파일을 읽고 쓰게 해준다.
+Stream처럼 버퍼를 달아서 속도를 향상시킬 수 있다.
 
 5. Path 사용 - JDK7이상
 Path는 위의 3가지 보다 더 간편하게 파일을 처리할 수 있게 해준다.
+
++) 줄바꿈
+Linux: \n, Window: \r\n
 ```
 - File
 ```Java
@@ -1028,5 +1032,20 @@ if(file.exist()) {
 ![image](https://user-images.githubusercontent.com/38368820/44449103-284f7a00-a628-11e8-88b9-4edd0c377847.png)
 ![image](https://user-images.githubusercontent.com/38368820/44449116-37362c80-a628-11e8-9fc7-8a1fe4476327.png)
 - Reader & Writer
+```Java
+파일 읽기는 앞과 거의 유사
+
+파일 쓰기
+
+* Stream과 다르게 write의 변수로 String을 담을 수 있다.
+
+파일이 존재 할 때 
+(1) 이어쓰려면
+FileWriter fw = new FileWriter(file, true)
+
+(2) 덮어쓰려면
+FileWriter fw = new FileWriter(file)
+FileWriter fw = new FileWriter(file, false)
+```
 - Path
 
