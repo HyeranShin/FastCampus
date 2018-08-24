@@ -856,7 +856,7 @@ HashMap<String, Integer> map = new HashMap();
 가. 파일의 정보를 읽는다.
 나. 파일 생성, 디렉토리 생성
 
-2. Stream 사용
+2. Stream 사용 (특히 중요)
 스트림은 일반 변수와 다르게 열고 닫는 과정을 거친다.
 가. 파일 읽기
 나. 파일 쓰기
@@ -1033,9 +1033,7 @@ if(file.exist()) {
 ![image](https://user-images.githubusercontent.com/38368820/44449116-37362c80-a628-11e8-9fc7-8a1fe4476327.png)
 - Reader & Writer
 ```Java
-파일 읽기는 앞과 거의 유사
-
-파일 쓰기
+앞과 거의 유사하나 파일 쓰기에서 다른 부분
 
 * Stream과 다르게 write의 변수로 String을 담을 수 있다.
 
@@ -1048,4 +1046,25 @@ FileWriter fw = new FileWriter(file)
 FileWriter fw = new FileWriter(file, false)
 ```
 - Path
+```Java
+파일 읽기
 
+// Path 선언
+Path path = Paths.get(filepath);
+
+// Path로 파일 읽어서 List에 줄 단위로 저장
+List<String> lines = Files.readAlllines(path);
+
+// 향상된 for문으로 한 줄씩 읽어서 result 변수에 더하기
+for(String line : lines) {
+  result = result + line + "\r\n";
+}
+
+파일 쓰기
+
+// Path 선언
+Path path = Paths.get(filepath);
+
+// Path로 파일 쓰기
+Files.write(path, content.getBytes());
+```
