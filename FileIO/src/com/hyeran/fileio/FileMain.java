@@ -44,8 +44,8 @@ public class FileMain {
 		// 텍스트 파일을 읽고 쓰게 해준다.
 		// 버퍼를 달아서 속도 향상 가능
 		UseReaderWriter urw = new UseReaderWriter();
-		urw.write("/Temp/test001.txt", "새로운 내용입니다.");
-		String content = urw.read("/Temp/test001.txt");
+		urw.write("/Temp/test.txt", "새로운 내용입니다.zzzz");
+		String content = urw.read("/Temp/test.txt");
 		System.out.println(content);
 		
 		// 5. Path 사용 - JDK7 이상
