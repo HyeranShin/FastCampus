@@ -5,8 +5,18 @@
 - 안드로이드 스튜디오 다운로드 및 설치 - 추가설명
 - 스튜디오 둘러보기
 - 에뮬레이터
+
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/ANDROID/HelloAndroid/app/src/main">HelloAndroid</a>
 - Hello Android
 - 안드로이드에서 github에 업로드하기
+```
+VCS > Enable Version Control Integration > Git
+
+하단에 Version Control이라는 도구 탭이 생김
+
+Unversioned Files 우클릭 > Add to VCS :point_right: 준비단계로 바뀜 :arrow_right:
+Default 우클릭 > Commit
+```
 
 ### 22. 레이아웃
 - ConstraintLayout (1)
