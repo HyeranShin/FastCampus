@@ -14,7 +14,7 @@ VCS > Enable Version Control Integration > Git
 
 하단에 Version Control이라는 도구 탭이 생김
 
-Unversioned Files 우클릭 > Add to VCS :point_right: 준비단계로 바뀜 :arrow_right:
+Unversioned Files 우클릭 > Add to VCS ☞ 준비단계로 바뀜
 Default 우클릭 > Commit
 ```
 
