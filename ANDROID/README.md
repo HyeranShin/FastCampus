@@ -11,8 +11,7 @@
 - 안드로이드에서 github에 업로드하기
 ```
 VCS > Enable Version Control Integration > Git
-
-하단에 Version Control이라는 도구 탭이 생김
+☞ 하단에 Version Control이라는 도구 탭이 생김
 
 Unversioned Files 우클릭 > Add to VCS ☞ 준비단계로 바뀜
 Default 우클릭 > Commit
