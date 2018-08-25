@@ -36,8 +36,8 @@ https://online.fastcampus.co.kr/courses/enrolled/327102
 25. 위젯
 26. 컨테이너
 
-[안드로이드 첫번째 프로젝트] 계산
-기
+[안드로이드 첫번째 프로젝트] 계산기
+
 27. 애니메이션
 28. Activity
 29. Fragment
@@ -50,4 +50,4 @@ https://online.fastcampus.co.kr/courses/enrolled/327102
 
 34. CustomView
 
-[안드로이드 세번째 프로젝트] pushpush 게임
+[안드로이드 세번째 프로젝트] push push 게임
