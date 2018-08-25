@@ -35,7 +35,9 @@ https://online.fastcampus.co.kr/courses/enrolled/327102
 24. 버튼
 25. 위젯
 26. 컨테이너
-[안드로이드 첫번째 프로젝트] 계산기
+
+[안드로이드 첫번째 프로젝트] 계산
+기
 27. 애니메이션
 28. Activity
 29. Fragment
@@ -43,6 +45,9 @@ https://online.fastcampus.co.kr/courses/enrolled/327102
 31. Permission
 32. Content Provider
 33. Broadcast Receiver
+
 [안드로이드 두번째 프로젝트] 갤러리
+
 34. CustomView
+
 [안드로이드 세번째 프로젝트] pushpush 게임
