@@ -1,9 +1,9 @@
-# FastCampus
+# FastCampus 
 https://online.fastcampus.co.kr/courses/enrolled/327102
 
-안드로이드 앱 개발 시작하기 CAMP 수강✏ (18.07.15-)
+### 안드로이드 앱 개발 시작하기 CAMP 수강✏ (18.07.15-)
 
-<a href="https://github.com/HyeranShin/FastCampus/blob/master/JAVA">JAVA</a>
+#### <a href="https://github.com/HyeranShin/FastCampus/blob/master/JAVA">JAVA</a>
 
 1. 프로그램 다운로드 및 설치
 2. 이클립스 프로젝트 구조
@@ -26,7 +26,7 @@ https://online.fastcampus.co.kr/courses/enrolled/327102
 19. 컬렉션
 20. 파일 읽고 쓰기
 
-<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID">ANDROID</a>
+#### <a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID">ANDROID</a>
 
 21. 안드로이드 설치 및 둘러보기
 22. 레이아웃
