@@ -6,7 +6,7 @@
 - 스튜디오 둘러보기
 - 에뮬레이터
 
-<a href="https://github.com/HyeranShin/FastCampus/tree/master/ANDROID/HelloAndroid/app/src/main">HelloAndroid</a>
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/HelloAndroid/app/src/main/java/com/hyeran/android/helloandroid/MainActivity.java">HelloAndroid</a>
 - Hello Android
 - 안드로이드에서 github에 업로드하기
 ```
