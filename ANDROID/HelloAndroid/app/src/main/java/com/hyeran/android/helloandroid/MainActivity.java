@@ -6,6 +6,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+/**
+ * Hello Android 프로젝트
+ */
 public class MainActivity extends AppCompatActivity {
 
     TextView tv;
