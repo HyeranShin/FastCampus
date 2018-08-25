@@ -849,7 +849,7 @@ HashMap<String, Integer> map = new HashMap();
 ```
 
 ### 20. 파일 읽고 쓰기
-<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA_Project/Collection/src/com/hyeran/fileio">FileIO</a>
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA_Project/FileIO/src/com/hyeran/fileio">FileIO</a>
 - File IO 설명
 ```
 1. File 클래스 사용
