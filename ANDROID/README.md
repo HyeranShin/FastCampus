@@ -21,6 +21,8 @@ Default 우클릭 > Commit
 - ConstraintLayout (1)
 - ConstraintLayout (2)
 - ConstraintLayout (3)
+
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Layout/app/src/main/res/layout/activity_relative.xml">RelativeLayout</a>
 - RelativeLayout
 - FrameLayout
 - LinearLayout
