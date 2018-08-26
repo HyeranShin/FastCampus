@@ -8,6 +8,33 @@
 
 <a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/HelloAndroid/app/src/main/java/com/hyeran/android/helloandroid/MainActivity.java">HelloAndroid</a>
 - Hello Android
+```Java
+화면과 소스코드 연결하기 - fineViewById()
+
+첫번째 방법: onCreate 바깥에 변수 선언
+Button bt;
+protected void onCreated(Bundle savedInstanceState) {
+    tv = findViewById(R.id.아이디명);
+}
+
+두번째 방법: final 예약어 사용
+final Button bt = findViewById(R.id.아이디명);
+```
+```Java
+버튼 클릭 처리 - 리스너 등록 
+
+bt.setOnClickListener(new View.OnClickListener() {
+    public void onClick(View v) { }
+});
+
+↑ 풀어서 쓰면 
+// 앞으로 실행할 리스너 생성
+View.onClickListener listener = new View.OnClickListener() {
+    public void onClick(View v) { }
+};
+// 위에서 작성한 리스너 등록
+bt.setOnClickListener(listener);
+```
 - 안드로이드에서 github에 업로드하기
 ```
 VCS > Enable Version Control Integration > Git ☞ 하단에 Version Control이라는 도구 탭이 생김
@@ -21,9 +48,14 @@ Default 우클릭 > Commit
 - ConstraintLayout (1)
 - ConstraintLayout (2)
 - ConstraintLayout (3)
-
+```
+레이아웃과 요소 간에 constraint를 조절해서 위치 결정
+```
 <a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Layout/app/src/main/res/layout/activity_relative.xml">RelativeLayout</a>
 - RelativeLayout
+```
+요소 간에 관계를 가지고 배치
+```
 - FrameLayout
 - LinearLayout
 - GridLayout (1)
