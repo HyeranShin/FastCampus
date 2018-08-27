@@ -56,8 +56,24 @@ Default 우클릭 > Commit
 ```
 요소 간에 관계를 가지고 배치
 ```
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Layout/app/src/main/res/layout/activity_frame.xml">FrameLayout</a>
 - FrameLayout
+```
+모든 요소들이 겹쳐서 배치
+모든 레이아웃의 기본이 되는 레이아웃 → 처리 속도가 가장 빠름
+```
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Layout/app/src/main/res/layout/activity_linear.xml">LinearLayout</a>
 - LinearLayout
+```
+요소들을 선형으로 배치
+orientation 요소 필수적으로 추가 (가로 축/세로 축 정렬 방향을 결정)
+
+LinearLayout을 자주 쓰는 가장 큰 이유?
+layout_weight 속성을 사용해서 화면에 꽉 채우기가 편함
+
+weight: 전체 비율 대비 내가 차지하는 비중
+  → weight를 쓸 때는 width/height를 0dp로 바꿔야함
+```
 - GridLayout (1)
 - GridLayout (2)
 - TableLayout
