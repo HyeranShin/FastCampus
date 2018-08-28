@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".RelativeActivity" />
         <activity android:name=".FrameActivity" />
-        <activity android:name=".LinearActivity"></activity>
+        <activity android:name=".LinearActivity" />
+        <activity android:name=".GridActivity"></activity>
     </application>
 
 </manifest>
