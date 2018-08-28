@@ -74,8 +74,21 @@ layout_weight 속성을 사용해서 화면에 꽉 채우기가 편함
 weight: 전체 비율 대비 내가 차지하는 비중
   → weight를 쓸 때는 width/height를 0dp로 바꿔야함
 ```
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Layout/app/src/main/res/layout/activity_grid.xml">GridLayout</a>
 - GridLayout (1)
 - GridLayout (2)
+```
+GirdLayout: 특정 영역을 지정해놓고 그 안에 들어갈 요소들의 위치를 결정
+GridView: 목록처럼 스크롤로 화면의 요소들을 볼 수 있도록 함 (컨테이너 역할)
+
+GridLayout
+  * column과 row 값으로 요소의 좌표(위치) 결정
+  * columnCount, rowCount 요소를 이용해서 좌표를 입력하지 않은 요소가 count를 넘어가게 되면 자동으로 다음 줄에 배치
+  * span 속성을 이용해서 셀과 셀을 합칠 수 있음
+  * 좌표를 지우고 사용하는게 컨트롤 하기 편함
+  * addView 사용해서 소스코드에서 요소 삽입 가능
+  * 많이 사용하지는 않음
+```
 - TableLayout
 - Margin and Padding
 
