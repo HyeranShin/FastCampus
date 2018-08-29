@@ -12,7 +12,7 @@
 
 첫번째 방법: onCreate 바깥에 변수 선언
 Button bt;
-protected void onCreated(Bundle savedInstanceState) {
+protected void onCreate(Bundle savedInstanceState) {
     tv = findViewById(R.id.아이디명);
 }
 
