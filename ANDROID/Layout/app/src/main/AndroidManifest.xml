@@ -20,7 +20,8 @@
         <activity android:name=".FrameActivity" />
         <activity android:name=".LinearActivity" />
         <activity android:name=".GridActivity" />
-        <activity android:name=".TableActivity"></activity>
+        <activity android:name=".TableActivity" />
+        <activity android:name=".MarginPaddingActivity"></activity>
     </application>
 
 </manifest>
