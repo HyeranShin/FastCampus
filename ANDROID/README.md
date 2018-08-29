@@ -59,7 +59,8 @@ Default 우클릭 > Commit
 <a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Layout/app/src/main/res/layout/activity_linear.xml">LinearLayout</a>
 ```
 * 요소들을 선형으로 배치
-* orientation 요소 필수적으로 추가 (가로 축/세로 축 정렬 방향을 결정)
+* orientation 요소 필수적으로 추가
+    → 가로 축/세로 축 정렬 방향을 결정
 
 LinearLayout을 자주 쓰는 가장 큰 이유?
 layout_weight 속성을 사용해서 화면에 꽉 채우기가 편함
