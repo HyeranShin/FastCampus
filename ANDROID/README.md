@@ -87,7 +87,7 @@ TableLayout만으로는 요소를 배치할 수 없음. TableRow 필요
   -> 이때 수직 측 전체 레이아웃에 해당하는 것이 TableLayout, LinearLayout처럼 오른 쪽으로 정렬해주는 역할이 TableRow
 많이 쓰이지는 않음
 ```
-<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Layout/app/src/main/res/layout/activity_margin_padding.xml">- Margin and Padding</a>
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Layout/app/src/main/res/layout/activity_margin_padding.xml">Margin and Padding</a>
 ```
 Margin: 나의 바깥 쪽으로 간격을 조절 → 나의 위치를 변화
 
