@@ -7,7 +7,6 @@
 - 에뮬레이터
 
 <a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/HelloAndroid/app/src/main/java/com/hyeran/android/helloandroid/MainActivity.java">HelloAndroid</a>
-- Hello Android
 ```Java
 화면과 소스코드 연결하기 - fineViewById()
 
@@ -45,25 +44,19 @@ Default 우클릭 > Commit
 
 ### 22. 레이아웃
 <a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Layout/app/src/main/res/layout/activity_constraint.xml">ConstraintLayout</a>
-- ConstraintLayout (1)
-- ConstraintLayout (2)
-- ConstraintLayout (3)
 ```
 레이아웃과 요소 간에 constraint를 조절해서 위치 결정
 ```
 <a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Layout/app/src/main/res/layout/activity_relative.xml">RelativeLayout</a>
-- RelativeLayout
 ```
 요소 간에 관계를 가지고 배치
 ```
 <a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Layout/app/src/main/res/layout/activity_frame.xml">FrameLayout</a>
-- FrameLayout
 ```
 모든 요소들이 겹쳐서 배치
 모든 레이아웃의 기본이 되는 레이아웃 → 처리 속도가 가장 빠름
 ```
 <a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Layout/app/src/main/res/layout/activity_linear.xml">LinearLayout</a>
-- LinearLayout
 ```
 요소들을 선형으로 배치
 orientation 요소 필수적으로 추가 (가로 축/세로 축 정렬 방향을 결정)
@@ -75,8 +68,6 @@ weight: 전체 비율 대비 내가 차지하는 비중
   → weight를 쓸 때는 width/height를 0dp로 바꿔야함
 ```
 <a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Layout/app/src/main/res/layout/activity_grid.xml">GridLayout</a>
-- GridLayout (1)
-- GridLayout (2)
 ```
 GirdLayout: 특정 영역을 지정해놓고 그 안에 들어갈 요소들의 위치를 결정
 GridView: 목록처럼 스크롤로 화면의 요소들을 볼 수 있도록 함 (컨테이너 역할)
@@ -89,8 +80,19 @@ GridLayout
   * addView 사용해서 소스코드에서 요소 삽입 가능
   * 많이 사용하지는 않음
 ```
-- TableLayout
-- Margin and Padding
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Layout/app/src/main/res/layout/activity_table.xml">TableLayout</a>
+```
+TableLayout만으로는 요소를 배치할 수 없음. TableRow 필요
+마치 수직 측 LinearLayout을 하나 놓고, 수평 측 LinearLayout을 층층히 쌓아놓은 형태
+  -> 이때 수직 측 전체 레이아웃에 해당하는 것이 TableLayout, LinearLayout처럼 오른 쪽으로 정렬해주는 역할이 TableRow
+많이 쓰이지는 않음
+```
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Layout/app/src/main/res/layout/activity_margin_padding.xml">- Margin and Padding</a>
+```
+Margin: 나의 바깥 쪽으로 간격을 조절 → 나의 위치를 변화
+
+Padding: 나의 안 쪽으로 간격을 조절 → 내 안의 요소의 위치를 변화
+```
 
 ### 23. 텍스트
 - TextView (1)
