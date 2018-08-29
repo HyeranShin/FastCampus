@@ -78,8 +78,8 @@ GridLayout
   * columnCount, rowCount 요소를 이용해서 좌표를 입력하지 않은 요소가 count를 넘어가게 되면 자동으로 다음 줄에 배치
   * span 속성을 이용해서 셀과 셀을 합칠 수 있음
   * 좌표를 지우고 사용하는 게 컨트롤 하기 편함
-  * addView 사용해서 소스코드에서 요소 삽입 가능
-  * 많이 사용하지는 않음
+  * addView를 사용해서 소스코드에서 요소 삽입 가능
+  * 많이 쓰이지는 않음
 ```
 <a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Layout/app/src/main/res/layout/activity_table.xml">TableLayout</a>
 ```
