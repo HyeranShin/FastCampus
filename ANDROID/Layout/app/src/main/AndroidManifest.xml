@@ -19,7 +19,8 @@
         <activity android:name=".RelativeActivity" />
         <activity android:name=".FrameActivity" />
         <activity android:name=".LinearActivity" />
-        <activity android:name=".GridActivity"></activity>
+        <activity android:name=".GridActivity" />
+        <activity android:name=".TableActivity"></activity>
     </application>
 
 </manifest>
