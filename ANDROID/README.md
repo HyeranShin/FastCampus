@@ -85,7 +85,8 @@ GridLayout
 ```
 * TableLayout만으로는 요소를 배치할 수 없음. TableRow 필요
 * 마치 수직 측 LinearLayout을 하나 놓고, 수평 측 LinearLayout을 층층히 쌓아놓은 형태
-    -> 이때 수직 측 전체 레이아웃에 해당하는 것이 TableLayout, LinearLayout처럼 오른 쪽으로 정렬해주는 역할이 TableRow
+    → 이때 수직 측 전체 레이아웃에 해당하는 것이 TableLayout
+    → LinearLayout처럼 오른 쪽으로 정렬해주는 역할이 TableRow
 * 많이 쓰이지는 않음
 ```
 <a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Layout/app/src/main/res/layout/activity_margin_padding.xml">Margin and Padding</a>
@@ -96,10 +97,26 @@ Padding: 나의 안 쪽으로 간격을 조절 → 내 안의 요소의 위치�
 ```
 
 ### 23. 텍스트
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Widget/app/src/main/res/layout/activity_text.xml">Text</a>
 - TextView (1)
 - TextView (2)
+```
+1줄만 입력할 수 있도록 강제하고 싶을 때 
+singleLine 체크, maxLine = 1
+  → singleLine은 높은 버전의 OS에서 동작하지 않으므로 singleLine과 maxLine을 같이 줘야 함
+
+안드로이드의 기본 사이즈 단위는 dp이지만,
+text에 한해서는 sp라는 단위 사용 → 줌인/줌아웃을 가능하게 하는 크기 단위
+
+activity가 여러 개 일때 원하는 activity 띄우는 법
+: manifest.xml 파일에서 <intent-filter/> 옮기기
+```
 - EditText (1)
 - EditText (2)
+```
+EditText를 클릭하면 소프트 키보드가 나타나는데
+Plain Text를 제외한 나머지들은 EditText를 클릭했을 때 나타나는 키보드 모양(inputType)을 바꿔주는 옵션
+```
 - String 리소스 사용하기
 - 다국어처리
 
