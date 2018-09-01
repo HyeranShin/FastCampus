@@ -33,6 +33,8 @@ View.onClickListener listener = new View.OnClickListener() {
 };
 // 위에서 작성한 리스너 등록
 bt.setOnClickListener(listener);
+
+☞ 하나의 리스너를 여러 위젯에 등록 가능
 ```
 - 안드로이드에서 github에 업로드하기
 ```
@@ -42,7 +44,7 @@ Unversioned Files 우클릭 > Add to VCS ☞ 준비단계로 바뀜
 Default 우클릭 > Commit
 ```
 
-### 22. 레이아웃
+### 22. 레이아웃(<a href="https://github.com/HyeranShin/FastCampus/tree/master/ANDROID/Layout/app/src/main/java/com/hyeran/android/layout">Layout</a>)
 <a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Layout/app/src/main/res/layout/activity_constraint.xml">ConstraintLayout</a>
 ```
 레이아웃과 요소 간에 constraint를 조절해서 위치 결정
@@ -95,8 +97,7 @@ Margin: 나의 바깥 쪽으로 간격을 조절 → 나의 위치를 변화
 
 Padding: 나의 안 쪽으로 간격을 조절 → 내 안의 요소의 위치를 변화
 ```
-
-### 23. 텍스트
+### 23. 텍스트(<a href="https://github.com/HyeranShin/FastCampus/tree/master/ANDROID/Widget/app/src/main/java/com/hyeran/android/widget">Widget</a>)
 <a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Widget/app/src/main/res/layout/activity_text.xml">Text</a>
 - TextView (1)
 - TextView (2)
@@ -116,9 +117,51 @@ activity가 여러 개 일때 원하는 activity 띄우는 법
 ```
 EditText를 클릭하면 소프트 키보드가 나타나는데
 Plain Text를 제외한 나머지들은 EditText를 클릭했을 때 나타나는 키보드 모양(inputType)을 바꿔주는 옵션
+
+hint 속성: placeholder라고도 하는데 예를 들어 로그인할 때 password라고 적혀있는 부분을 클릭하면 
+           password라는 글자는 사라지고 입력할 수 있도록 바꿔줌
 ```
+```Java
+소스코드에서
+
+입력된 글자 가져오기
+getText().toString()
+
+글자 입력하기
+setText(입력할 텍스트)
+
+글자 지우기
+setText("")
+```
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Widget/app/src/main/res/layout/activity_res_string.xml">ResString</a>
 - String 리소스 사용하기
+```Java
+리소스: 소스 코드를 제외한 이미지, mp3, 텍스트 파일 전부
+
+<string name="아이디명">텍스트</string>
+
+사용하는 이유?
+액티비티를 여러개 쓸 경우 글자나 메뉴 명이 바뀌면 모든 액티비티의 글자를 하나하나 바꿔줘야한다.
+그럴 때 strings.xml에 먼저 정의를 해놓으면 id값을 찾아서 사용하므로 strings.xml만 바꾸면 모든 화면에 반영된다.
+
+☞ 이미지가 아닌 텍스트를 입력할 땐 꼭 strings.xml에 정의하고 사용하기 습관화!
+```
 - 다국어처리
+```
+기기에 언어 추가하기
+Settings > System > Language preferences > Add a language > 한국어(대한민국)
+
+기기의 Main Language 바꾸기
+오른 쪽에 줄 네개짜리 아이콘 드래그해서 첫번째로 옮기기
+
+다국어 처리: 여러 개의 strings.xml을 국가별 버전에 맞춰서 만들어 놓고 각 id에 맞는 글자 입력
+
+strings.xml 오른 쪽에 Opne editor > 지구본 아이콘 
+☞ 언어 목록 뜸. 내가 추가하고자 하는 언어 검색해서 선택
+☞ strings.xml이 디렉토리로 바뀌면서 언어별로 파일이 생김
+☞ defualt language 내용 복사해서 텍스트만 추가한 언어로 수정
+☞ 기기의 언어 설정에 따라 파일 참조
+```
 
 ### 24. 버튼
 - 버튼 (1)
