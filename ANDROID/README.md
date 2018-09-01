@@ -98,7 +98,7 @@ Margin: 나의 바깥 쪽으로 간격을 조절 → 나의 위치를 변화
 Padding: 나의 안 쪽으로 간격을 조절 → 내 안의 요소의 위치를 변화
 ```
 ### 23. 텍스트(<a href="https://github.com/HyeranShin/FastCampus/tree/master/ANDROID/Widget/app/src/main/java/com/hyeran/android/widget">Widget</a>)
-<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Widget/app/src/main/res/layout/activity_text.xml">Text</a>
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Widget/app/src/main/java/com/hyeran/android/widget/TextActivity.java">Text</a>
 - TextView (1)
 - TextView (2)
 ```
