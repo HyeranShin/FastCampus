@@ -44,7 +44,7 @@ Unversioned Files 우클릭 > Add to VCS ☞ 준비단계로 바뀜
 Default 우클릭 > Commit
 ```
 
-### 22. 레이아웃(<a href="https://github.com/HyeranShin/FastCampus/tree/master/ANDROID/Layout/app/src/main/java/com/hyeran/android/layout">Layout</a>)
+### 22. 레이아웃(<a href="https://github.com/HyeranShin/FastCampus/tree/master/ANDROID/Layout/app/src/main/res/layout">Layout</a>)
 <a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Layout/app/src/main/res/layout/activity_constraint.xml">ConstraintLayout</a>
 ```
 레이아웃과 요소 간에 constraint를 조절해서 위치 결정
