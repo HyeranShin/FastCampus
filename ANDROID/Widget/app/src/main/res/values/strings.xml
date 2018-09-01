@@ -1,9 +1,7 @@
 <resources>
     <string name="app_name">Widget</string>
 
-    <string name="menu1">집으로</string>
-    <string name="menu2">도구</string>
-
-    <string name="text1">텍스트뷰에 입력되는 글자</string>
-    <string name="button1">버튼입니다</string>
+    <string name="menu1">Menu 1</string>
+    <string name="menu2">Menu 2</string>
+    <string name="menu3">Menu 3</string>
 </resources>

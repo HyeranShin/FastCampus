@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">위젯</string>
+
+    <string name="menu1">메뉴 1</string>
+    <string name="menu2">메뉴 2</string>
+    <string name="menu3">메뉴 3</string>
+</resources>
