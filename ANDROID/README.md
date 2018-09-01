@@ -163,9 +163,60 @@ strings.xml 오른 쪽에 Opne editor > 지구본 아이콘
 ☞ 기기의 언어 설정에 따라 파일 참조
 ```
 
-### 24. 버튼
+### 24. 버튼(<a href="https://github.com/HyeranShin/FastCampus/tree/master/ANDROID/Widget/app/src/main/java/com/hyeran/android/widget">Widget</a>)
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Widget/app/src/main/java/com/hyeran/android/widget/ButtonActivity.java">Button</a>
 - 버튼 (1)
 - 버튼 (2)
+```Java
+버튼 text에 소문자 입력해도 대문자로 나올 때 해결하는 법
+textAllCaps = false
+
+리스너: 자바에 미리 구현되어 있는 인터페이스
+
+onClickListener 등록할 때 new O치면 자동완성
+
+Toast 띄우는 법
+Toast.makeText(getBaseContext()/getApplicationText(), "(텍스트내용)", 몇 초).show();
++) 몇 초에 해당하는 변수는 Toast 클래스 안에 정의되어있음
+LENGTH_SHORT: 4초, LENGTH_LONG: 8초
+```
+```Java
+버튼을 동작시키는 방법
+
+// 1, 2, 3은 동일한데 형태만 다름
+
+1. 리스너를 익명 클래스로 만들어서 등록
+/* 버튼을 사용하는 방법*/
+// 가. 화면과 소스 코드 연결
+Button click1 = findViewById(R.id.click1);
+
+// 나. 버튼 리스너 작성
+View.OnClickListener listener = new View.OnClickListener() {
+  @Override
+  public void onClick(View v) { }
+};
+
+// 다. 리스너를 버튼에 등록
+click1.setOnClickListener(listener);
+
+2. 리스너 익명 클래스를 직접 등록
+Button click2 = findViewById(R.id.click2);
+
+click2.setOnClickListener(new View.OnClickListener() {
+  @Override
+  public void onClick(View v) { }
+});
+
+3. 리스너 인터페이스를 클래스에 구현
+Button click3 = findViewById(R.id.click3);
+click3.setOnClickListener(this);    // 클래스를 통째로 념겨준다.
+
+클래스에 implements View.OnClickListener ☞ Alt+Enter > Implements method 
+☞ 클래스의 멤버 함수로 onClick 생성. 코드 작성
+
+4. 함수를 화면 xml에서 직접 호출
+클래스의 멤버 함수로 코드 작성 ☞ xml 파일에서 onClick 속성 값으로 함수 이름
+```
 - 이미지 버튼 (1)
 - 이미지 버튼 (2)
 - 체크박스
