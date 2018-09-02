@@ -121,7 +121,7 @@ Plain Text를 제외한 나머지들은 EditText를 클릭했을 때 나타나�
 hint 속성: placeholder라고도 하는데 예를 들어 로그인할 때 password라고 적혀있는 부분을 클릭하면 
            password라는 글자는 사라지고 입력할 수 있도록 바꿔줌
 ```
-```Java
+```
 소스코드에서
 
 입력된 글자 가져오기
@@ -135,7 +135,7 @@ setText("")
 ```
 <a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Widget/app/src/main/res/layout/activity_res_string.xml">ResString</a>
 - String 리소스 사용하기
-```Java
+```
 리소스: 소스 코드를 제외한 이미지, mp3, 텍스트 파일 전부
 
 <string name="아이디명">텍스트</string>
@@ -167,7 +167,7 @@ strings.xml 오른 쪽에 Opne editor > 지구본 아이콘
 <a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Widget/app/src/main/java/com/hyeran/android/widget/ButtonActivity.java">Button</a>
 - 버튼 (1)
 - 버튼 (2)
-```Java
+```
 버튼 text에 소문자 입력해도 대문자로 나올 때 해결하는 법
 textAllCaps = false
 
@@ -217,6 +217,7 @@ click3.setOnClickListener(this);    // 클래스를 통째로 념겨준다.
 4. 함수를 화면 xml에서 직접 호출
 클래스의 멤버 함수로 코드 작성 ☞ xml 파일에서 onClick 속성 값으로 함수 이름
 ```
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Widget/app/src/main/res/layout/activity_image_button.xml">ImageButton</a>
 - 이미지 버튼 (1)
 - 이미지 버튼 (2)
 ```
