@@ -188,7 +188,7 @@ LENGTH_SHORT: 4초, LENGTH_LONG: 8초
 1. 리스너를 익명 클래스로 만들어서 등록
 /* 버튼을 사용하는 방법*/
 // 가. 화면과 소스 코드 연결
-Button click1 = findViewById(R.id.click1);
+Button click1 = findViewById(R.id.click1); // 아이디명과 변수명은 맞춰주는게 사용하기 편함
 
 // 나. 버튼 리스너 작성
 View.OnClickListener listener = new View.OnClickListener() {
@@ -219,6 +219,28 @@ click3.setOnClickListener(this);    // 클래스를 통째로 념겨준다.
 ```
 - 이미지 버튼 (1)
 - 이미지 버튼 (2)
+```
+mipmap: 아이콘 이미지를 사용하는 디렉토리
+drawable: 일반적인 이미지를 사용하는 디렉토리
+  -> 사용하는 이미지 해상도에 맞게끔 디렉토리(Android Resource Directory) 생성해야함
+  -> drawable-xhdpi, drawable-xxhdpi(Full HD)
+```
+```
+기본적으로 이미지 버튼에 깔려있는 배경 없애는 법
+: background 속성 오른쪽 ... 표시 > Resource 창의 Color 탭 > android > trasparent
+
+이미지 버튼에 클릭 효과(눌린 표시) 주기: selector 사용
+
+1. xml 파일에 down 이미지와 up 이미지 링크 걸기
+  1.1 drawable 디렉토리 우클릭 > Drawable resource file 생성
+  1.2 selector에서 버튼의 상태에 따라 사용되는 이미지 적용
+      Pressed 두개를 selector 밑에 갖다 놓는다 
+      > 하나는 state_pressed=true ☞ down 이미지
+      > 하나는 state_pressed=false(체크 해제) ☞ up 이미지
+
+2. 이미지 버튼에 이미지 링크가 아니라 만들어놓은 xml 파일 링크 걸기
+레이아웃의 버튼에 srcCompat 속성 오른쪽 ... 표시 > 만들어놓은 selector 선택
+```
 - 체크박스
 - 라디오버튼
 - 토글버튼 (1)
