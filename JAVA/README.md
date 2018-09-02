@@ -1,7 +1,7 @@
 # JAVA
 
 ### 1. 프로그램 다운로드 및 설치 & 2. 이클립스 프로젝트 구조
-<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA_Project/TestProject/src/com/hyeran/testproject">TestProject</a>
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA/TestProject/src/com/hyeran/testproject">TestProject</a>
 - 새 프로젝트 생성 및 테스트
 - 이클립스 한글처리
 ```
@@ -17,7 +17,7 @@ Window > Preferences > General > Colors and Fonts > Basic > Text Font
 - 함수 및 프로그램 시작점 entry point
 
 ### 3. 코딩 규칙 및 변수 다루기
-<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA_Project/CodingRule/src/com/hyeran/codingrule">CodingRule</a>
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA/CodingRule/src/com/hyeran/codingrule">CodingRule</a>
 - 코드 작성 규칙
 ```
 1. 패키지 이름: 모두 소문자로
@@ -53,9 +53,9 @@ Window > Preferences > General > Colors and Fonts > Basic > Text Font
 ```
 - 들여쓰기
 
-<a href="https://github.com/HyeranShin/FastCampus/blob/master/JAVA_Project/VariableConstant/src/com/hyeran/variableconstant/VariableConstant.java">VariableConstant</a>
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/JAVA/VariableConstant/src/com/hyeran/variableconstant/VariableConstant.java">VariableConstant</a>
 - 변수와 상수
-```JAVA
+```
 1. 변수: 타입 변수이름;
 int number = 57;
 
@@ -63,7 +63,7 @@ int number = 57;
 final double PI = 3.141592;
 ```
 
-<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA_Project/DataType/src/com/hyeran/datatype/DataType.java">DataType</a>
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA/DataType/src/com/hyeran/datatype/DataType.java">DataType</a>
 - 자료형
 ```JAVA
 데이터 타입: 변수에 담을 값의 크기를 결정하는 표식
@@ -94,7 +94,7 @@ String str = "안녕하세요";
 클래스: 대표적으로 문자열을 저장하는 String 클래스가 있음
 ```
 
-<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA_Project/ArrayType/src/com/hyeran/arraytype/ArrayType.java">ArrayType</a>
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA/ArrayType/src/com/hyeran/arraytype/ArrayType.java">ArrayType</a>
 - 배열
 ```JAVA
 선언하는 방법: int[] array; 혹은 int array[];
@@ -110,7 +110,7 @@ array = new int[5];
 String array[] = {"월요일", "화요일", "수요일", "목요일", "금요일", "토요일", "일요일"};
 ```
 
-<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA_Project/TypeCasting/src/com/hyeran/typecasting/Typecasting.java">TypeCasting</a>
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA/TypeCasting/src/com/hyeran/typecasting/Typecasting.java">TypeCasting</a>
 - 타입캐스팅
 ```JAVA
 자료형 변환이 필요한 이유
@@ -139,7 +139,7 @@ double result = Double.parseLong(str);
 int result = Integer.parseInt(str);
 ```
 
-<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA_Project/Operator/src/com/hyeran/operator/Operator.java">Operator</a>
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA/Operator/src/com/hyeran/operator/Operator.java">Operator</a>
 - 연산자
 ```
 1. 대입 연산자 =
@@ -169,10 +169,10 @@ pass = (english_score > cut_line)? true : false;
 ![image](https://user-images.githubusercontent.com/38368820/42943691-710977a4-8b9e-11e8-821c-e15679b181b0.png)
 
 ### 5. 문자열 String 다루기
-<a href="https://github.com/HyeranShin/FastCampus/tree/maste/JAVA_Projectr/String/src/com/hyeran/string">String</a>
+<a href="https://github.com/HyeranShin/FastCampus/tree/maste/JAVA/String/src/com/hyeran/string">String</a>
 - 자주 사용되는 String 함수 (1)
 - 자주 사용되는 String 함수 (2)
-```JAVA
+```
 1. 문자열 비교: equals
    대소문자 구분하지 않고 비교: equalsignoreCase
    'A'.equals('A');
@@ -216,8 +216,8 @@ pass = (english_score > cut_line)? true : false;
 ```
 - 문자열 함수 사용 예 (로그인 처리)
 
-### 6. 조건문 (<a href="https://github.com/HyeranShin/FastCampus/blob/master/JAVA_Project/Condition/java%20%EC%A0%9C%EC%96%B4%EB%AC%B8.pdf">pdf</a>)
-<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA_Project/Condition/src/com/hyeran/condition">Condition</a>
+### 6. 조건문 (<a href="https://github.com/HyeranShin/FastCampus/blob/master/JAVA/Condition/java%20%EC%A0%9C%EC%96%B4%EB%AC%B8.pdf">pdf</a>)
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA/Condition/src/com/hyeran/condition">Condition</a>
 - if
 - switch
 ```JAVA
@@ -254,11 +254,16 @@ case 4:
 case 5:
     System.out.println("3 이상 입니다.");
     break;
+}
 ```
 - if와 switch, 어떤게 좋을까?
+```
+if: 변수의 값을 범위로 나눌 때
+switch: 변수의 값을 특정할 수 있고 값의 종류가 많을 때
+ ```
 
 ### 7. 반복문 
-<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA_Project/Loop/src/com/hyeran/loop">Loop</a>
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA/Loop/src/com/hyeran/loop">Loop</a>
 - for
 - 중첩 for
 - 배열에서 반복문 사용하기
@@ -315,12 +320,12 @@ do {
 ```
 
 ### 8. Algorithm 문제 풀기
-<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA_Project/Algorithm/src/com/hyeran/algorithm">Algorithm</a>
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA/Algorithm/src/com/hyeran/algorithm">Algorithm</a>
 - 기본 알고리즘 예제 1 - sum
 - 기본 알고리즘 예제 2 - 피보나치
 
 ### 9. 객체 지향에서의 클래스
-<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA_Project/Class/src/com/hyeran/clazz">Class<a>
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA/Class/src/com/hyeran/clazz">Class<a>
 - Class_1
 - Class_2
 - Class_3
@@ -383,7 +388,7 @@ Class    <= 구현체(코드화)
 Instance <= 실행체(new Class)
 ```
 
-<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA_Project/Function/src/com/hyeran/function">Function</a>
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA/Function/src/com/hyeran/function">Function</a>
 - Function
 ```
 함수에 값 넘길 때 명칭: 입력 시 argument, 정의 시 parameter
@@ -404,7 +409,7 @@ public void take(int number, String str) {}
 X. 리턴 타입은 오버로드 대상이 아님
 ```
 
-<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA_Project/Constructor/src/com/hyeran/constructor">Constructor</a>
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA/Constructor/src/com/hyeran/constructor">Constructor</a>
 - constructor
 ```
 생성자: 클래스 호출 시 자동으로 불리는 함수
@@ -416,7 +421,7 @@ X. 리턴 타입은 오버로드 대상이 아님
 ```
 
 ### 10. 클래스와 로딩
-<a href="https://github.com/HyeranShin/FastCampus/blob/master/JAVA_Project/UsingClass/src/com/hyeran/using/UsingMain.java">UsingClass</a>
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/JAVA/UsingClass/src/com/hyeran/using/UsingMain.java">UsingClass</a>
 - new와 static으로 보는 메모리(1)
 - new와 static으로 보는 메모리(2)
 ```
@@ -436,7 +441,7 @@ X. 리턴 타입은 오버로드 대상이 아님
 ```
 
 ### 11. 내장 객체와 라이브러리
-<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA_Project/Builtin/src/com/hyeran/builtin/Builtin.java">Builtin</a>
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA/Builtin/src/com/hyeran/builtin/Builtin.java">Builtin</a>
 - 내장 객체, 내장 함수, 라이브러리
 ```
 내장 클래스: System, String처럼 Java에 이미 만들어져 있는 클래스로 바로 가져다 사용 가능
@@ -449,9 +454,9 @@ X. 리턴 타입은 오버로드 대상이 아님
   * 주로 3rd party 개발자들이 만들어서 제공
   * 라이브러리 형태로 파일을 다운받아서 
 ```
-<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA_Project/SystemOut/src/com/hyeran/systemout/OutMain.java">SystemOut</a>
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA/SystemOut/src/com/hyeran/systemout/OutMain.java">SystemOut</a>
 - System.out은 어떻게 만들어져 있을까?
-<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA_Project/StringReview/src/com/hyeran/stringreview/StringMain.java">StringMain</a>
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA/StringReview/src/com/hyeran/stringreview/StringMain.java">StringMain</a>
 - StringBuffer와 StringBuilder
 ```
 문자열 더하기 연산을 할 때
@@ -474,7 +479,7 @@ X. 리턴 타입은 오버로드 대상이 아님
 ```
 
 ### 12. 첫번째 프로젝트
-<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA_Project/ProjectLotto">ProjectLotto</a>
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA/ProjectLotto">ProjectLotto</a>
 - Random 클래스를 이용한 로또 번호 추출기
 
 ### 13. 코드 관리
@@ -527,7 +532,7 @@ Git 로컬 저장소 생성
 
 
 ### 14. 상속이란?
-<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA_Project/Inheritance/src/com/hyeran/inheritance">Inheritance</a>
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA/Inheritance/src/com/hyeran/inheritance">Inheritance</a>
 - inheritance_상속이란?
 - inheritance_다단상속
 ```
@@ -574,7 +579,7 @@ protected: 다른 패키지에 있더라도 상속을 통해서 사용 가능
 ```
 
 ### 15. 객체지향 설계 도구
-<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA_Project/Design%20Tools/src/com/hyeran/tools">Design Tools</a>
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA/Design%20Tools/src/com/hyeran/tools">Design Tools</a>
 - interface
 ```Java
 interface
@@ -659,9 +664,9 @@ AnnoClass anno = new AnnoClass();
 Annotation ano = (Annotation) cls.getAnnotation(Annotation.class);
 String key = ano.key();
 ```
-<a href="https://github.com/HyeranShin/FastCampus/blob/master/JAVA_Project/InnerClass/src/com/hyeran/innerclass/InnerMain.java">InnerClass</a>
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/JAVA/InnerClass/src/com/hyeran/innerclass/InnerMain.java">InnerClass</a>
 - inner class
-```Java
+```
 inner class: 클래스 내부에 정의하는 클래스
 
 종류
@@ -694,7 +699,7 @@ Common.Inner in2 = new Common.Inner();
 ```
 
 ### 16. 예외처리
-<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA_Project/Exception/src/com/hyeran/exception">Exception</a>
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA/Exception/src/com/hyeran/exception">Exception</a>
 - exception
 - finally
 ```Java
@@ -728,7 +733,7 @@ Exception(예외) 종류
 ```
 
 ### 17. 키보드 입력 처리
-<a href="https://github.com/HyeranShin/FastCampus/blob/master/JAVA_Project/SystemIn/src/com/hyeran/system/in/SystemInMain.java">SystemIn</a>
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/JAVA/SystemIn/src/com/hyeran/system/in/SystemInMain.java">SystemIn</a>
 - Scanner와 System.in -입력 클래스 사용
 ```Java
 Scanner scanner = new Scanner(System.in);
@@ -749,7 +754,7 @@ while(runFlag) {
 ```
 
 ### 18. 두번째 프로젝트
-<a href="https://github.com/HyeranShin/FastCampus/blob/master/JAVA_Project/ProjectCalculator/src/com/hyeran/calc/CalcMain.java">ProjectCalculator</a>
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/JAVA/ProjectCalculator/src/com/hyeran/calc/CalcMain.java">ProjectCalculator</a>
 - 계산기 만들기 -라이브러리 활용
 ```Java
 // 입력받은 문자열을 계산해주는(식으로 만들어주는) 라이브러리
@@ -766,8 +771,8 @@ try {
 ```
 
 ### 19. 컬렉션
-<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA_Project/Collection/src/com/hyeran/collection">Collection</a>
-```Java 
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA/Collection/src/com/hyeran/collection">Collection</a>
+``` 
 배열과 컬렉션의 차이
 배열: 정해진 크기를 벗어난 값을 입력할 수 없음
 컬렉션: 정해진 크기가 없고, 값을 계속 넣을 수 있음 (동적 배열)
@@ -849,7 +854,7 @@ HashMap<String, Integer> map = new HashMap();
 ```
 
 ### 20. 파일 읽고 쓰기
-<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA_Project/FileIO/src/com/hyeran/fileio">FileIO</a>
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/JAVA/FileIO/src/com/hyeran/fileio">FileIO</a>
 - File IO 설명
 ```
 1. File 클래스 사용
