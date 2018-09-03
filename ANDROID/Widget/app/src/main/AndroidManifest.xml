@@ -12,7 +12,8 @@
         <activity android:name=".TextActivity" />
         <activity android:name=".ResStringActivity" />
         <activity android:name=".ButtonActivity" />
-        <activity android:name=".ImageButtonActivity">
+        <activity android:name=".ImageButtonActivity" />
+        <activity android:name=".CheckboxActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,4 +21,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>
