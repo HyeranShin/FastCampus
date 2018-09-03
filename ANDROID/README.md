@@ -242,7 +242,46 @@ drawable: 일반적인 이미지를 사용하는 디렉토리
 2. 이미지 버튼에 이미지 링크가 아니라 만들어놓은 xml 파일 링크 걸기
 레이아웃의 버튼에 srcCompat 속성 오른쪽 ... 표시 > 만들어놓은 selector 선택
 ```
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Widget/app/src/main/java/com/hyeran/android/widget/CheckboxActivity.java">CheckBox</a>
 - 체크박스
+```Java
+가. 체크 박스가 하나일 때
+
+1. 화면과 소스 코드 연결
+CheckBox checkBox = findViewById(R.id.checkBox);
+
+2. 리스너 작성
+checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                                    // new O까지 치면 자동 완성
+  public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) { }
+});
+
+나. 체크 박스가 여러개일 때: 체크 박스를 모두 소스 코드와 연결하고 하나의 리스너를 모든 체크 박스에 등록
+
+1. 화면과 소스 코드 연결
+CheckBox a = findViewById(R.id.a);
+CheckBox b = findViewById(R.id.b);
+CheckBox c = findViewById(R.id.c);
+
+2. 리스너 작성
+CompoundButton.OnCheckedChangeListener listener = new CompoundButton.OnCheckedChangeListener() {
+  public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+    // checkBox 클릭 -> buttonView 파라미터로 checkBox가 넘어감 -> getId()로 id를 꺼낼 수 있음
+    switch(buttonView.getId()) {
+      case R.id.a;
+        break;
+      case R.id.b;
+        break;
+      case R.id.c;
+        break;
+    }
+  }
+};
+
+a.setOnCheckedChangeListener(listener);
+b.setOnCheckedChangeListener(listener);
+c.setOnCheckedChangeListener(listener);
+```
 - 라디오버튼
 - 토글버튼 (1)
 - 토글버튼 (2)
