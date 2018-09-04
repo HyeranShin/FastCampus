@@ -192,8 +192,7 @@ Button click1 = findViewById(R.id.click1); // 아이디명과 변수명은 맞�
 
 // 나. 버튼 리스너 작성
 View.OnClickListener listener = new View.OnClickListener() {
-  @Override
-  public void onClick(View v) { }
+    public void onClick(View v) { }
 };
 
 // 다. 리스너를 버튼에 등록
@@ -203,8 +202,7 @@ click1.setOnClickListener(listener);
 Button click2 = findViewById(R.id.click2);
 
 click2.setOnClickListener(new View.OnClickListener() {
-  @Override
-  public void onClick(View v) { }
+    public void onClick(View v) { }
 });
 
 3. 리스너 인터페이스를 클래스에 구현
@@ -253,7 +251,7 @@ CheckBox checkBox = findViewById(R.id.checkBox);
 2. 리스너 작성
 checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                                     // new O까지 치면 자동 완성
-  public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) { }
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) { }
 });
 
 나. 체크 박스가 여러개일 때: 체크 박스를 모두 소스 코드와 연결하고 하나의 리스너를 모든 체크 박스에 등록
@@ -265,17 +263,17 @@ CheckBox c = findViewById(R.id.c);
 
 2. 리스너 작성
 CompoundButton.OnCheckedChangeListener listener = new CompoundButton.OnCheckedChangeListener() {
-  public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
     // checkBox 클릭 -> buttonView 파라미터로 checkBox가 넘어감 -> getId()로 id를 꺼낼 수 있음
-    switch(buttonView.getId()) {
-      case R.id.a;
-        break;
-      case R.id.b;
-        break;
-      case R.id.c;
-        break;
+        switch(buttonView.getId()) {
+            case R.id.a;
+                break;
+            case R.id.b;
+                break;
+            case R.id.c;
+                break;
+        }
     }
-  }
 };
 
 a.setOnCheckedChangeListener(listener);
@@ -295,17 +293,17 @@ c.setOnCheckedChangeListener(listener);
 RadioGroup radioGroup = findViewById(R.id.radioGroup);
 
 radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-  public void onCheckedChanged(RadioGroup group, int checkedId) {
+    public void onCheckedChanged(RadioGroup group, int checkedId) {
     // 선택된 라디오 버튼의 아이디가 두번째 인자로 넘어 옴
-    switch (checkedId) {
-      case R.id.a:
-        break;
-      case R.id.b:
-        break;
-      case R.id.c:
-        break;
+        switch (checkedId) {
+            case R.id.a:
+                break;
+            case R.id.b:
+                break;
+            case R.id.c:
+                break;
+        }
     }
-  }
 );
 ```
 - 토글버튼 (1)
