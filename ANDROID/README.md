@@ -282,7 +282,32 @@ a.setOnCheckedChangeListener(listener);
 b.setOnCheckedChangeListener(listener);
 c.setOnCheckedChangeListener(listener);
 ```
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Widget/app/src/main/java/com/hyeran/android/widget/RadioActivity.java">CheckBox</a>
 - 라디오버튼
+```Java
+라디오버튼
+* 체크 박스와 유사하나 단독으로 쓰일 수 없음
+* 라디오 버튼을 쓰기 위해서는 라디오 버튼을 감싸는 일종의 레이아웃 역할을 하는 라디오 그룹을 먼저 배치
+* 라디오 버튼, 라디 오그룹 모두에게 아이디 부여해야 함
+* 소스 코드에서는 라디오 그룹만 연결
+* default로 선택되는 거 설정: RadioGroup의 checkedButton 속성에서 선택
+
+RadioGroup radioGroup = findViewById(R.id.radioGroup);
+
+radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+  public void onCheckedChanged(RadioGroup group, int checkedId) {
+    // 선택된 라디오 버튼의 아이디가 두번째 인자로 넘어 옴
+    switch (checkedId) {
+      case R.id.a:
+        break;
+      case R.id.b:
+        break;
+      case R.id.c:
+        break;
+    }
+  }
+);
+```
 - 토글버튼 (1)
 - 토글버튼 (2)
 - 스위치
