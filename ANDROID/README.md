@@ -308,6 +308,18 @@ radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 ```
 - 토글버튼 (1)
 - 토글버튼 (2)
+```
+ToggleButton 
+* 클릭하면 ON <-> OFF 바뀜
+* 체크 박스랑 모양만 다르다고 생각하면 됨
+* 체크 박스처럼 OnCheckedListener 사용
+* ImageButton처럼 selector를 통해 상태에 따른 이미지 적용 가능
+    -> 단, Pressed가 아니라 Checked 사용
+    -> background 속성에 링크 걸어주기
+
+default 값인 ON/OFF 글자 지우기
+: 디자인 모드에서 변경 불가. 텍스트 모드에서 textOff, textOn 속성 값으로 "" 
+```
 - 스위치
 
 ### 25. 위젯
