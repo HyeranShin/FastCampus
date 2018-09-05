@@ -13,15 +13,16 @@
         <activity android:name=".ResStringActivity" />
         <activity android:name=".ButtonActivity" />
         <activity android:name=".ImageButtonActivity" />
-        <activity android:name=".CheckboxActivity">
-        </activity>
-        <activity android:name=".RadioActivity">
+        <activity android:name=".CheckboxActivity" />
+        <activity android:name=".RadioActivity" />
+        <activity android:name=".ToggleActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SwitchActivity"></activity>
     </application>
 
 </manifest>
