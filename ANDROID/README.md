@@ -280,7 +280,7 @@ a.setOnCheckedChangeListener(listener);
 b.setOnCheckedChangeListener(listener);
 c.setOnCheckedChangeListener(listener);
 ```
-<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Widget/app/src/main/java/com/hyeran/android/widget/RadioActivity.java">CheckBox</a>
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Widget/app/src/main/java/com/hyeran/android/widget/RadioActivity.java">RadioButton</a>
 - 라디오버튼
 ```Java
 라디오버튼
@@ -306,6 +306,7 @@ radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
     }
 );
 ```
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Widget/app/src/main/res/layout/activity_toggle.xml">ToggleButton</a>
 - 토글버튼 (1)
 - 토글버튼 (2)
 ```
@@ -318,7 +319,7 @@ ToggleButton
     -> background 속성에 링크 걸어주기
 
 default 값인 ON/OFF 글자 지우기
-: 디자인 모드에서 변경 불가. 텍스트 모드에서 textOff, textOn 속성 값으로 "" 
+: 디자인 모드에서 변경 불가. 텍스트 모드에서 textOff, textOn 속성 값으로 "" 추가
 ```
 - 스위치
 
