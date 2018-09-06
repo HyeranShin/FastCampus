@@ -55,13 +55,13 @@ Default 우클릭 > Commit
 ```
 <a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Layout/app/src/main/res/layout/activity_frame.xml">FrameLayout</a>
 ```
-* 모든 요소들이 겹쳐서 배치
-* 모든 레이아웃의 기본이 되는 레이아웃 → 처리 속도가 가장 빠름
+- 모든 요소들이 겹쳐서 배치
+- 모든 레이아웃의 기본이 되는 레이아웃 → 처리 속도가 가장 빠름
 ```
 <a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Layout/app/src/main/res/layout/activity_linear.xml">LinearLayout</a>
 ```
-* 요소들을 선형으로 배치
-* orientation 요소 필수적으로 추가
+- 요소들을 선형으로 배치
+- orientation 요소 필수적으로 추가
     → 가로 축/세로 축 정렬 방향을 결정
 
 LinearLayout을 자주 쓰는 가장 큰 이유?
@@ -85,11 +85,11 @@ GridLayout
 ```
 <a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Layout/app/src/main/res/layout/activity_table.xml">TableLayout</a>
 ```
-* TableLayout만으로는 요소를 배치할 수 없음. TableRow 필요
-* 마치 수직 측 LinearLayout을 하나 놓고, 수평 측 LinearLayout을 층층히 쌓아놓은 형태
+- TableLayout만으로는 요소를 배치할 수 없음. TableRow 필요
+- 마치 수직 측 LinearLayout을 하나 놓고, 수평 측 LinearLayout을 층층히 쌓아놓은 형태
     → 이때 수직 측 전체 레이아웃에 해당하는 것이 TableLayout
     → LinearLayout처럼 오른 쪽으로 정렬해주는 역할이 TableRow
-* 많이 쓰이지는 않음
+- 많이 쓰이지는 않음
 ```
 <a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Layout/app/src/main/res/layout/activity_margin_padding.xml">Margin and Padding</a>
 ```
@@ -284,11 +284,11 @@ c.setOnCheckedChangeListener(listener);
 - 라디오버튼
 ```Java
 라디오버튼
-* 체크 박스와 유사하나 단독으로 쓰일 수 없음
-* 라디오 버튼을 쓰기 위해서는 라디오 버튼을 감싸는 일종의 레이아웃 역할을 하는 라디오 그룹을 먼저 배치
-* 라디오 버튼, 라디 오그룹 모두에게 아이디 부여해야 함
-* 소스 코드에서는 라디오 그룹만 연결
-* default로 선택되는 거 설정: RadioGroup의 checkedButton 속성에서 선택
+- 체크 박스와 유사하나 단독으로 쓰일 수 없음
+- 라디오 버튼을 쓰기 위해서는 라디오 버튼을 감싸는 일종의 레이아웃 역할을 하는 라디오 그룹을 먼저 배치
+- 라디오 버튼, 라디 오그룹 모두에게 아이디 부여해야 함
+- 소스 코드에서는 라디오 그룹만 연결
+- default로 선택되는 거 설정: RadioGroup의 checkedButton 속성에서 선택
 
 RadioGroup radioGroup = findViewById(R.id.radioGroup);
 
@@ -311,10 +311,10 @@ radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 - 토글버튼 (2)
 ```
 ToggleButton 
-* 클릭하면 ON <-> OFF 바뀜
-* CheckBox랑 모양만 다르다고 생각하면 됨
-* CheckBox처럼 OnCheckedListener 사용
-* ImageButton처럼 selector를 통해 상태에 따른 이미지 적용 가능
+- 클릭하면 ON <-> OFF 바뀜
+- CheckBox랑 모양만 다르다고 생각하면 됨
+- CheckBox처럼 OnCheckedListener 사용
+- ImageButton처럼 selector를 통해 상태에 따른 이미지 적용 가능
     -> 단, Pressed가 아니라 Checked 사용
     -> background 속성에 링크 걸어주기
 
@@ -325,9 +325,9 @@ default 값인 ON/OFF 글자 지우기
 <a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Widget/app/src/main/res/layout/activity_switch.xml">Switch</a>
 ```
 Switch
-* CheckBox, ToggleButton과 동일한 동작 원리
-* CheckBox, ToggleButton처럼 OnCheckedListener 사용
-* 스위치 앞 텍스트의 위치를 바꾸기 어려움 ☞ text 속성을 지우고 옆에 TextView를 가져다 놓는 방법 사용
+- CheckBox, ToggleButton과 동일한 동작 원리
+- CheckBox, ToggleButton처럼 OnCheckedListener 사용
+- 스위치 앞 텍스트의 위치를 바꾸기 어려움 ☞ text 속성을 지우고 옆에 TextView를 가져다 놓는 방법 사용
 ```
 
 ### 25. 위젯
