@@ -312,8 +312,8 @@ radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 ```
 ToggleButton 
 * 클릭하면 ON <-> OFF 바뀜
-* 체크 박스랑 모양만 다르다고 생각하면 됨
-* 체크 박스처럼 OnCheckedListener 사용
+* CheckBox랑 모양만 다르다고 생각하면 됨
+* CheckBox처럼 OnCheckedListener 사용
 * ImageButton처럼 selector를 통해 상태에 따른 이미지 적용 가능
     -> 단, Pressed가 아니라 Checked 사용
     -> background 속성에 링크 걸어주기
@@ -322,6 +322,13 @@ default 값인 ON/OFF 글자 지우기
 : 디자인 모드에서 변경 불가. 텍스트 모드에서 textOff, textOn 속성 값으로 "" 추가
 ```
 - 스위치
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Widget/app/src/main/res/layout/activity_switch.xml">Switch</a>
+```
+Switch
+* CheckBox, ToggleButton과 동일한 동작 원리
+* CheckBox, ToggleButton처럼 OnCheckedListener 사용
+* 스위치 앞 텍스트의 위치를 바꾸기 어려움 ☞ text 속성을 지우고 옆에 TextView를 가져다 놓는 방법 사용
+```
 
 ### 25. 위젯
 - ImageView
