@@ -15,14 +15,13 @@
         <activity android:name=".ImageButtonActivity" />
         <activity android:name=".CheckboxActivity" />
         <activity android:name=".RadioActivity" />
-        <activity android:name=".ToggleActivity">
+        <activity android:name=".ToggleActivity" />
+        <activity android:name=".SwitchActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SwitchActivity"></activity>
     </application>
 
 </manifest>
