@@ -321,8 +321,8 @@ ToggleButton
 default 값인 ON/OFF 글자 지우기
 : 디자인 모드에서 변경 불가. 텍스트 모드에서 textOff, textOn 속성 값으로 "" 추가
 ```
-- 스위치
 <a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Widget/app/src/main/res/layout/activity_switch.xml">Switch</a>
+- 스위치
 ```
 Switch
 - CheckBox, ToggleButton과 동일한 동작 원리
