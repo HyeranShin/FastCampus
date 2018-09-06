@@ -331,7 +331,33 @@ Switch
 ```
 
 ### 25. 위젯
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Widget/app/src/main/res/layout/activity_image.xml">ImageView</a>
 - ImageView
+```
+ImageView
+- 기본적인 구조는 ImageButton과 동일
+
+ImageView나 ImageButton을 사용할 때 가장 많이 쓰이는 속성: scaleType
+- matrix
+    * 이미지의 실제 사이즈대로 보여줌
+    * 줄이면 특정 영역만 보여짐
+- fitXY
+    * XY 좌표를 ImageView안에 구겨 넣어줌
+    * 가로, 세로가 늘리는대로 늘어남
+- fitStart
+    * ImageView의 앞에 채워줌
+- fitCenter
+    * ImageView의 중간에 채워줌
+- fitEnd
+    * ImageView의 끝에 채워줌
+- center
+    * 화면의 실제 사이즈대로 ImageView의 중앙에 맞춰줌
+- centerCrop
+    * 가장 많이 쓰임 ex) 앨범
+    * 원래 이미지의 비율을 깨지않게 잘라서 ImageView에 꽉 채워줌
+- centerInside
+    * 원래 이미지의 비율을 깨지않는 한에서 ImageView의 중앙에 꽉 채워줌
+```
 - 이미지리소스 사용하기
 - SeekBar
 - RatingBar
