@@ -1,6 +1,6 @@
 # ANDROID
 
-### 21. 안드로이드 설치 및 둘러보기
+### 21. 안드로이드 설치 및 둘러보기(<a href="https://github.com/HyeranShin/FastCampus/tree/master/ANDROID/HelloAndroid/app/src/main/java/com/hyeran/android/helloandroid">HelloAndroid</a>)
 - 안드로이드 스튜디오 다운로드 및 설치
 - 안드로이드 스튜디오 다운로드 및 설치 - 추가설명
 - 스튜디오 둘러보기
@@ -330,7 +330,7 @@ Switch
 - 스위치 앞 텍스트의 위치를 바꾸기 어려움 ☞ text 속성을 지우고 옆에 TextView를 가져다 놓는 방법 사용
 ```
 
-### 25. 위젯
+### 25. 위젯(<a href="https://github.com/HyeranShin/FastCampus/tree/master/ANDROID/Widget/app/src/main/java/com/hyeran/android/widget">Widget</a>)
 <a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Widget/app/src/main/res/layout/activity_image.xml">ImageView</a>
 - ImageView
 ```
@@ -423,7 +423,8 @@ RatingBar
 - 마이너스와 플러스 버튼을 이용해서 조절하기도 함 (setRating 사용)
 ```
 
-### 26. 컨테이너
+### 26. 컨테이너(<a href="https://github.com/HyeranShin/FastCampus/tree/master/ANDROID/Widget/app/src/main/java/com/hyeran/android/widget">Widget</a>)
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Widget/app/src/main/res/layout/activity_scroll.xml">ScrollView</a>
 - ScrollView
 ```
 일반적인 레이아웃은 스크롤 기능이 없으므로
