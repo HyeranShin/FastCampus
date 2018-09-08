@@ -17,7 +17,8 @@
         <activity android:name=".RadioActivity" />
         <activity android:name=".ToggleActivity" />
         <activity android:name=".SwitchActivity" />
-        <activity android:name=".ImageActivity">
+        <activity android:name=".ImageActivity" />
+        <activity android:name=".SeekBarActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
