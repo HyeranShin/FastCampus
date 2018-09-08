@@ -389,7 +389,7 @@ SeekBar
 - OnSeekBarChangeListener 사용
     → 3개의 함수 중 onProgressChanged 하나로 처리 가능
     → SeekBar를 드래그 할 때마다 지속적으로 호출
-    → SeekBar의 위치를 두 번째 파라미터로 전달
+    → SeekBar의 위치가 두 번째 파라미터로 전달
     
 SeekBar를 이용해 View의 background 속성 바꾸기
 
@@ -409,7 +409,19 @@ R 값 바꾸기: 0xff000000 + seekbar_position * 0x10000
 G 값 바꾸기: 0xff000000 + seekbar_position * 0x100
 B 값 바꾸기: 0xff000000 + seekbar_position * 0x1 
 ```
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Widget/app/src/main/java/com/hyeran/android/widget/RatingBarActivity.java">RatingBar</a>
 - RatingBar
+```
+RatingBar
+- 주요 속성
+    → numStars: 별 개수 지정
+    → rating: 최초 시작하는 별의 개수
+    → stepSize: 별을 조절할 수 있는 최소 단위
+- OnRatingBarChangeListener 사용
+    → ratingNumber가 두번째 파라미터로 전달
+- 클릭, 드래그는 별을 조절하는 기본 방법
+- 마이너스와 플러스 버튼을 이용해서 조절하기도 함 (setRating 사용)
+```
 
 ### 26. 컨테이너
 - ScrollView
