@@ -19,9 +19,11 @@
         <activity android:name=".SwitchActivity" />
         <activity android:name=".ImageActivity" />
         <activity android:name=".SeekBarActivity" />
-        <activity android:name=".RatingBarActivity">
+        <activity android:name=".RatingBarActivity" />
+        <activity android:name=".ScrollActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
