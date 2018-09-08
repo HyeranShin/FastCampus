@@ -439,7 +439,16 @@ ScrollView: 레이아웃 X 컨테이너 O
 *) xmlns:, tools:는 namespace로 걸려있는 주소에 가면 아래에서 사용할 속성의 이름들이 정의되어 있음
     ☞ 최상위 레이아웃의 속성이어야 함
 ```
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Widget/app/src/main/res/layout/activity_cardview.xml">CardView</a>
 - CardView
+```
+CardView
+- 사각형의 모서리를 round 처리 하는게 가장 큰 역할 (cardCornerRadius 속성 사용)
+- 애니메이션 처리할 때 CardView가 더 효율적이라고 알려져 있음
+- 나머지는 레이아웃과 별 차이 X
+- 항상 레이아웃과 같이 써야 함
+- padding 적용 불가
+```
 
 ### [안드로이드 첫번째 프로젝트]
 - 계산기 만들기
