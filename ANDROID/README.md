@@ -221,8 +221,8 @@ click3.setOnClickListener(this);    // 클래스를 통째로 념겨준다.
 ```
 mipmap: 아이콘 이미지를 사용하는 디렉토리
 drawable: 일반적인 이미지를 사용하는 디렉토리
-  -> 사용하는 이미지 해상도에 맞게끔 디렉토리(Android Resource Directory) 생성해야함
-  -> drawable-xhdpi, drawable-xxhdpi(Full HD)
+  → 사용하는 이미지 해상도에 맞게끔 디렉토리(Android Resource Directory) 생성해야함
+  → drawable-xhdpi, drawable-xxhdpi(Full HD)
 ```
 ```
 기본적으로 이미지 버튼에 깔려있는 배경 없애는 법
@@ -315,8 +315,8 @@ ToggleButton
 - CheckBox랑 모양만 다르다고 생각하면 됨
 - CheckBox처럼 OnCheckedListener 사용
 - ImageButton처럼 selector를 통해 상태에 따른 이미지 적용 가능
-    -> 단, Pressed가 아니라 Checked 사용
-    -> background 속성에 링크 걸어주기
+    → 단, Pressed가 아니라 Checked 사용
+    → background 속성에 링크 걸어주기
 
 default 값인 ON/OFF 글자 지우기
 : 디자인 모드에서 변경 불가. 텍스트 모드에서 textOff, textOn 속성 값으로 "" 추가
@@ -359,7 +359,56 @@ ImageView나 ImageButton을 사용할 때 가장 많이 쓰이는 속성: scaleT
     * 원래 이미지의 비율을 깨지않는 한에서 ImageView의 중앙에 꽉 채워줌
 ```
 - 이미지리소스 사용하기
+```
+***리소스 이름 규칙: 소문자, 숫자, '_' 문자만 사용
+
+image resource directory 구성
+☞ 해상도에 따라 총 6개의 drawable directory 만들어서 사용
+
+- ldpi(low dpi)
+- mdpi(mid dpi): 실제 이미지의 1px이 화면의 1px과 같다.
+    → 기준(default) 해상도(320X480)
+    → drawable directory와 같은 사이즈
+- hdpi(high dpi): 실제 이미지의 1.5px이 화면의 1px과 같다.
+
+고해상도
+- xhdpi: 실제 이미지의 2px이 화면의 1px과 같다.
+- xxhdpi: 실제 이미지의 3px이 화면의 1px과 같다.
+    → 갤럭시 7,8
+- xxxhdpi: 실제 이미지의 4px이 화면의 1px과 같다.
+    → 갤럭시 노트
+
+안드로이드는 이런 구조를 가지고 있어서 화면 해상도가 다름에도 불구하고 각각의 해상도에 맞게끔 이미지를 표현해줄 수 있다.
+```
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Widget/app/src/main/java/com/hyeran/android/widget/SeekBarActivity.java">SeekBar</a>
 - SeekBar
+```
+SeekBar
+- 볼륨 조절, 시간 조절 용도로 많이 사용
+- max 속성 값으로 범위 지정
+- OnSeekBarChangeListener 사용
+    → 3개의 함수 중 onProgressChanged 하나로 처리 가능
+    → SeekBar를 드래그 할 때마다 지속적으로 호출
+    → SeekBar의 위치를 두 번째 파라미터로 전달
+    
+SeekBar를 이용해 View의 background 속성 바꾸기
+
+View: 크기와 위치 값만 갖는 위젯
+
+max 속성 값으로 255 설정
+    → 왼쪽으로 갈수록 검정, 오른쪽으로 갈수록 색상
+setBackgroundColor 함수 사용
+    → 컬러는 기본적으로 16진수가 입력돼야 하므로 SeekBar의 위치를 그대로 넣어줄 수 없음
+    
+0~255를 00~ff로 변환하기
+  T R G B
+0x00000000 (16진수라는 걸 컴파일러에게 알려주기 위해 앞에 0x를 붙임)
+
+T는 투명 값으로 00을 주면 색이 나타나지 않음, ff로 하면 색이 정상적으로 나타남
+R 값 바꾸기: 0xff000000 + seekbar_position * 0x10000
+G 값 바꾸기: 0xff000000 + seekbar_position * 0x100
+B 값 바꾸기: 0xff000000 + seekbar_position * 0x1 
+```
 - RatingBar
 
 ### 26. 컨테이너
