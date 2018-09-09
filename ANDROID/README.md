@@ -1,6 +1,6 @@
 # ANDROID
 
-### 21. 안드로이드 설치 및 둘러보기(<a href="https://github.com/HyeranShin/FastCampus/tree/master/ANDROID/HelloAndroid/app/src/main/java/com/hyeran/android/helloandroid">HelloAndroid</a>)
+### 21. 안드로이드 설치 및 둘러보기
 - 안드로이드 스튜디오 다운로드 및 설치
 - 안드로이드 스튜디오 다운로드 및 설치 - 추가설명
 - 스튜디오 둘러보기
@@ -451,7 +451,19 @@ CardView
 ```
 
 ### [안드로이드 첫번째 프로젝트]
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Calculator/app/src/main/java/com/hyeran/android/calculator/MainActivity.java">Calculator</a>
 - 계산기 만들기
+```
+화면 상에 버튼이 많으므로 View.OnClickListener를 Activity 단위에서 구현하는 게 좋다.
+    ☞ 버튼에 OnClickListener를 this로 달아주기
+
+계산
+1. 글자 하나하나 
+2. 연산자와 숫자를 분리해서 담기
+3. 반복문을 돌면서 *와 /를 먼저 처리하기
+4. 반복문을 돌면서 +와 -를 처리하기
+5. 결과 값을 저장
+```
 
 ### 27. 애니메이션
 - View 애니메이션
