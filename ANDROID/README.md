@@ -470,11 +470,9 @@ CardView
 - View 애니메이션
 ```Java
 View Animation
-: 예를 들어 버튼을 화면에 배치하고, 특정 위치로 이동시키면(애니메이션으로)
-이동한 위치에서는 클릭되지 않고, 원래 위치에서만 클릭된다.
-
-Property Animation
-: 실제 화면 요소가 해당 위치로 이동한다.
+- 예를 들어 버튼을 화면에 배치하고, 특정 위치로 이동시키면(애니메이션으로)
+  이동한 위치에서는 클릭되지 않고, 원래 위치에서만 클릭된다.
+- Animation 클래스 사용
 
 애니메이션 적용하기
 1. xml로 애니메이션 동작 정의
@@ -498,7 +496,37 @@ Property Animation
 * 애니메이션이 동작하는 시간: android:duration ☞ 밀리세컨 기준. 1000=1초
 * 애니메이션이 끝났을 때 원래 상태로 돌아가지 않으려면 android:fillAfter="true" 추가
 ```
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Animation/app/src/main/java/com/hyeran/android/animation/PropAniActivity.java">Property Animation</a>
 - Property 애니메이션
+```Java
+Property Animation
+- 실제 화면 요소가 해당 위치로 이동한다.
+- ObjectAnimator 클래스 사용
+
+애니메이션 실행하기 <X, Y 좌표 이동>
+1. 움직일 대상 연결
+btnMove = findViewById(R.id.btnMove);
+
+2. 프로퍼티 애니메이션 생성
+// ObjectAnimator는 한번에 하나의 속성만 제어 가능
+ObejctAnimator moveX = ObjectAnimator.ofFloat(
+    btnMove, // 움직일 대상
+    "translationX", // 애니메이션을 적용할 속성. 속성은 구글 공식 사이트에 가면 나와있음
+    100 // 속성의 값 
+);
+ObjectAnimator moveY = ObjectAnimator.ofFloat(
+    btnMove,
+    "translationY",
+    100
+);
+
+3. 여러 개의 프로퍼티 애니메이션 합치기
+aniSet = new AnimatorSet();
+aniSet.playTogether(moveX, moveY);
+aniSet.setDuration(5000);
+
+aniSet.start();
+```
 
 ### 28. Activity
 - 액티비티 설정
