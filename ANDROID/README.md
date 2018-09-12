@@ -465,8 +465,39 @@ CardView
 5. 결과 값을 저장
 ```
 
-### 27. 애니메이션
+### 27. 애니메이션(<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Animation/app/src/main/java/com/hyeran/android/animation">Animation</a>)
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Animation/app/src/main/java/com/hyeran/android/animation/MainActivity.java">View Animation</a>
 - View 애니메이션
+```Java
+View Animation
+: 예를 들어 버튼을 화면에 배치하고, 특정 위치로 이동시키면(애니메이션으로)
+이동한 위치에서는 클릭되지 않고, 원래 위치에서만 클릭된다.
+
+Property Animation
+: 실제 화면 요소가 해당 위치로 이동한다.
+
+애니메이션 적용하기
+1. xml로 애니메이션 동작 정의
+    → app > res 우클릭 > Android Resource Directory 
+      > Resource type [anim] 생성 후 우클릭 > Animation resource file
+2. 코드에 정의한 xml 적용
+    → Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.(xml파일이름));
+      button.startAnimation(animation);
+
+애니메이션 태그에는 대표적으로 alpah, scale, translate, rotate 네가지가 있고, set을 이용해서 동시에 적용 가능하다.
+
+- alpha: 투명도
+- translate: 이동
+    → 속성 값은 상대 값으로 0은 현재 위치
+- scale: 크기
+- rotate: 회전
+    → scale과 rotate의 속성 중 pivot은 기준이 되는 중심점
+    → default는 왼쪽위이고, 가운데를 중심으로 돌려면 X, Y에 각각 50%
+
+* android: 치면 필요한 속성들 나옴
+* 애니메이션이 동작하는 시간: android:duration ☞ 밀리세컨 기준. 1000=1초
+* 애니메이션이 끝났을 때 원래 상태로 돌아가지 않으려면 android:fillAfter="true" 추가
+```
 - Property 애니메이션
 
 ### 28. Activity
