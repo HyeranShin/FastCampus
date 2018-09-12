@@ -530,6 +530,23 @@ aniSet.start();
 
 ### 28. Activity
 - 액티비티 설정
+```
+앱의 시작점 설정
+AndroidManifest.xml 파일의 <intent-filter> 안의 <action android:name="android.intent.action.MAIN"/>
+☞ 자신이 entry point라는 걸 시스템에게 알려준다.
+
+수동으로 Activity 만들기
+1. Java Class 생성 > extends AppCompatActivity 추가 > 클래스 정의 줄 우클릭 
+   > Generate > Override Methods > onCreate
+2. manifest에 추가
+<activity android:name=".(액티비티 이름)"></activity>
+
+앱 이름 바꾸기
+manifest의 <application> 태그(앱 하나를 가리킴) 속 label 속성 값 수정해야 함
+> @string/app_name을 Ctrl + 좌클릭 하면 이동
+> app_name 수정 ☞ manifest에 반영
+* 바로 수정해도 되지만 다국어 처리 등을 위해서 꼭 string resource에 적어놓고 사용하기
+```
 - 다른 액티비티 호출하기
 - 액티비티 사이에 값 주고 받기
 - Intent
