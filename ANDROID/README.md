@@ -569,6 +569,61 @@ getApplicationContext()
 - 앱 종료 후 메모리 유지를 피하기 위해서 getBaseContext 사용
 ```
 - 액티비티 사이에 값 주고 받기
+```Java
+<값을 전달만 하는 경우>
+- MainActivity
+Intent에 값 담아서 전달
+intent.putExtra(name, value);   // Map 클래스와 동일하게 동작
+
+- SecondActivity
+1. MainActivity에서 전달된 Intent 꺼내기
+Intent intent = getIntent();
+
+2. Intent에 담긴 값 중에 원하는 값 꺼내기
+String value = intent.getStringExtra(name); 
+// 숫자로 보내면 숫자를 꺼내는 함수 사용, 문자를 보내면 문자를 꺼내는 함수 사용 
+
+<값을 주고 받는 경우>
+- MainActivity 
+1. 액티비티 전환할 때 
+startActivity(intent) 대신 startActivityForResult(intent, requestCode) 사용
+
+requestCode를 사용하는 이유
+예를 들어 값을 전달할 때 동일한 액티비티를 호출하는 버튼이 두개라면 어떤 버튼으로 호출된건지 확인하기 위한 구분 값
+
+2. onActivityResult 함수 구현
+클래스 영역 우클릭 > Generate > Override Methods > onActivityResult
+
+2.1 requestCode 체크: 실제 내가 호출한 결과 처리인지 확인
+if(requestCode == 999) {
+    2.2 정상적으로 결과 값이 넘어왔는 지 검사
+    if(resultCode == RESULT_OK) {
+        2.3 넘어온 결과 값 Intent에서 값을 꺼내서 처리
+        String temp = data.getStringExtra(name);
+    }
+}
+
+- SecondActivity
+1. Intent 생성
+Intent intent = new Intent();   // 메세지 객체 생성
+
+2. Intent에 값 담기
+intent.putExtra(name, value);
+
+3. 결과 메세지를 전달
+setResult(RESULT_OK, intent);
+// 모든 처리가 정상적으로 완료됐다는 것을 알려주기 위해서 앞에는 RESULT_OK 메세지, 뒤에는 내가 전달할 메세지 객체 담기
+
+보통 액티비티에서 액티비티로 값을 전달할 때는 시스템을 통해서 인텐트 메세지 전달 ☞ 시스템 리소스 사용
+대부분의 경우 인자로 항상 getBaseContext()를 담지만, 메세지를 전달할 때 context를 사용하지 않는 유일한 함수가 setResult
+
+4. 액티비티 종료
+finish();
+//SecondActivity.this.finish();
+
+* MainActivity에서 startActivityForResult()로 SecondActivity를 호출했을 때만 
+  SecondActivity가 finish() 되는 순간 MainActivity의 onActivityResult() 호출
+```
 - Intent
 - Activity Stack
 - Activity LifeCycle
