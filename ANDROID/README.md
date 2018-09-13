@@ -548,6 +548,26 @@ manifest의 <application> 태그(앱 하나를 가리킴) 속 label 속성 값 �
 * 바로 수정해도 되지만 다국어 처리 등을 위해서 꼭 string resource에 적어놓고 사용하기
 ```
 - 다른 액티비티 호출하기
+```Java
+시스템에 다른 액티비티를 호출하라고 메세지 전달
+
+1. Intent 생성
+Intent intent = new Intent(getBaseConText(), SecondActivity.class); // 내가 호출할 클래스의 full name
+
+2. 안드로이드에 액티비티를 실행해달라고 intent 전달
+startActivity(intent);
+
++) getBaseContext(), getApplicationContext() 차이점
+
+getBaseContext()
+- Activity의 Context
+- 생성자나 Context에서 기본 설정된 Context
+
+getApplicationContext()
+- Service의 Context
+- 어플리케이션의 종료 이후에도 활동 가능한 글로벌한 Application의 Context
+- 앱 종료 후 메모리 유지를 피하기 위해서 getBaseContext 사용
+```
 - 액티비티 사이에 값 주고 받기
 - Intent
 - Activity Stack
