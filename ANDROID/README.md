@@ -547,6 +547,7 @@ manifest의 <application> 태그(앱 하나를 가리킴) 속 label 속성 값 �
 > app_name 수정 ☞ manifest에 반영
 * 바로 수정해도 되지만 다국어 처리 등을 위해서 꼭 string resource에 적어놓고 사용하기
 ```
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/ANDROID/Activity/app/src/main/java/com/hyeran/android/activity">Activity</a>
 - 다른 액티비티 호출하기
 ```Java
 시스템에 다른 액티비티를 호출하라고 메세지 전달
@@ -624,6 +625,7 @@ finish();
 * MainActivity에서 startActivityForResult()로 SecondActivity를 호출했을 때만 
   SecondActivity가 finish() 되는 순간 MainActivity의 onActivityResult() 호출
 ```
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Activity/app/src/main/java/com/hyeran/android/activity/IntentActivity.java">Intent</a>
 - Intent
 ```
 Android Intent
