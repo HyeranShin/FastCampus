@@ -10,14 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
+        </activity>
+        <activity android:name=".SecondActivity"></activity>
+        <activity android:name=".ThirdActivity" />
+        <activity android:name=".IntentActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" /> <!-- 앱의 시작 점 -->
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SecondActivity">
-        </activity>
-        <activity android:name=".ThirdActivity"></activity>
     </application>
 
 </manifest>
