@@ -547,7 +547,7 @@ manifest의 <application> 태그(앱 하나를 가리킴) 속 label 속성 값 �
 > app_name 수정 ☞ manifest에 반영
 * 바로 수정해도 되지만 다국어 처리 등을 위해서 꼭 string resource에 적어놓고 사용하기
 ```
-<a href="https://github.com/HyeranShin/FastCampus/tree/master/ANDROID/Activity/app/src/main/java/com/hyeran/android/activity">Activity</a>
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Activity/app/src/main/java/com/hyeran/android/activity/MainActivity.java">Activity</a>
 - 다른 액티비티 호출하기
 ```Java
 시스템에 다른 액티비티를 호출하라고 메세지 전달
@@ -569,6 +569,7 @@ getApplicationContext()
 - 어플리케이션의 종료 이후에도 활동 가능한 글로벌한 Application의 Context
 - 앱 종료 후 메모리 유지를 피하기 위해서 getBaseContext 사용
 ```
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Activity/app/src/main/java/com/hyeran/android/activity/MainActivity.java">MainActivity</a>, <a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Activity/app/src/main/java/com/hyeran/android/activity/SecondActivity.java">SecondActivity</a>
 - 액티비티 사이에 값 주고 받기
 ```Java
 <값을 전달만 하는 경우>
@@ -649,6 +650,12 @@ Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.naver.com")
 +) 검색 등
 ```
 - Activity Stack
+```
+Activity Stack: 액티비티가 생성될 때 마다 저장되는 메모리 구조
+- 가장 마지막에 들어온 게 가장 먼저 나간다.
+- 눈에 보이는 화면은 가장 위에 쌓인 화면
+- finish()를 하면 하나씩 없어지면서 바로 아래 화면이 보인다.
+```
 - Activity LifeCycle
 
 ### 29. Fragment
