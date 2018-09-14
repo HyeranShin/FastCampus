@@ -625,6 +625,27 @@ finish();
   SecondActivity가 finish() 되는 순간 MainActivity의 onActivityResult() 호출
 ```
 - Intent
+```
+Android Intent
+1. 명시적 Explicit
+new Intent(context, 호출할 대상 명시-activity.class)
+
+2. 암묵적 Implicit
+기존에 안드로이드에 이미 정의되어있는 ACTION 사용
+Intent를 사용해서 기존에 만들어진 액티비티 자원들을 사용할 수 있다.
+각 ACTION에 맞는 Uri로 parse해줘야 하고, 각 ACTION에 맞는 프로토콜도 정의되었다.
+
+가. 전화거는 화면 호출
+Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:XXX-XXXX-XXXX"));
+
+나. 문자 보내는 화면 호출
+Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:XXX-XXXX-XXXX"));
+
+다. 웹 사이트 화면 호출
+Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.naver.com"));
+
++) 검색 등
+```
 - Activity Stack
 - Activity LifeCycle
 
