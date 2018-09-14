@@ -630,6 +630,7 @@ finish();
 - Intent
 ```Java
 Android Intent
+
 1. 명시적 Explicit
 new Intent(context, 호출할 대상 명시-activity.class)
 
