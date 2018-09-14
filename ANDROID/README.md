@@ -628,7 +628,7 @@ finish();
 ```
 <a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Activity/app/src/main/java/com/hyeran/android/activity/IntentActivity.java">Intent</a>
 - Intent
-```
+```Java
 Android Intent
 1. 명시적 Explicit
 new Intent(context, 호출할 대상 명시-activity.class)
