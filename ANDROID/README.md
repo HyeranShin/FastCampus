@@ -657,6 +657,7 @@ Activity Stack: 액티비티가 생성될 때 마다 저장되는 메모리 구�
 - 눈에 보이는 화면은 가장 위에 쌓인 화면
 - finish()를 하면 하나씩 없어지면서 바로 아래 화면이 보인다.
 ```
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/ANDROID/ActivityLifeCycle/app/src/main/java/com/hyeran/android/activitylifecycle">Activity Life Cycle</a>
 - Activity LifeCycle
 ```Java
 로그를 출력하는 함수
