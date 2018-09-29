@@ -617,7 +617,7 @@ setResult(RESULT_OK, intent);
 // 모든 처리가 정상적으로 완료됐다는 것을 알려주기 위해서 앞에는 RESULT_OK 메세지, 뒤에는 내가 전달할 메세지 객체 담기
 
 보통 액티비티에서 액티비티로 값을 전달할 때는 시스템을 통해서 인텐트 메세지 전달 ☞ 시스템 리소스 사용
-대부분의 경우 인자로 항상 getBaseContext()를 담지만, 메세지를 전달할 때 context를 사용하지 않는 유일한 함수가 setResult
+대부분의 경우 인자로 getBaseContext()를 담지만, 메세지를 전달할 때 context를 사용하지 않는 유일한 함수가 setResult
 
 4. 액티비티 종료
 finish();
@@ -658,6 +658,46 @@ Activity Stack: 액티비티가 생성될 때 마다 저장되는 메모리 구�
 - finish()를 하면 하나씩 없어지면서 바로 아래 화면이 보인다.
 ```
 - Activity LifeCycle
+![image](https://user-images.githubusercontent.com/38368820/46249524-b6a7ee80-c465-11e8-9d9a-0ff78cfe6eb6.png)
+```Java
+로그를 출력하는 함수
+System.out.println(): 모두 출력
+Log.d(): 시스템이 과부하일 경우 로그의 일부 생략 ☞ 시스템 성능에 영향 덜 미침
+
+Log.d(tag, msg);
+- tag: 로그 창에서 내가 출력할 로그를 검색하는 용도. 보통 액티비티 이름 사용.
+- msg: 로그를 담는 용도
+
+// 플레이어 연결
+// 플레이어 재생
+
+@Override
+protected void onStart() {
+    super.onStart();
+}
+@Override
+protected void onResume() {
+    super.onStart();
+    // 플레이어 다시 시작
+}
+@Override
+protected void onPause() {
+    super.onStart();
+    // 플레이어 스탑
+}
+@Override
+protected void onStop() {
+    super.onStart();
+}
+@Override
+protected void onDestroy() {
+    super.onStart();
+}
+
+생명주기는 소멸주기 2개, 생성주기 2개로 구성.
+호출되는 액티비티가 화면 전체를 가리면 두개씩(onStart, onResume/onPause, onStop) 호출되고, 
+화면 부분을 가리면 하나씩(onResume/onPause) 호출된다.
+```
 
 ### 29. Fragment
 - 프래그먼트 기본
