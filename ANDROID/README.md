@@ -658,8 +658,6 @@ Activity Stack: 액티비티가 생성될 때 마다 저장되는 메모리 구�
 - finish()를 하면 하나씩 없어지면서 바로 아래 화면이 보인다.
 ```
 - Activity LifeCycle
-
-![image](https://user-images.githubusercontent.com/38368820/46249524-b6a7ee80-c465-11e8-9d9a-0ff78cfe6eb6.png)
 ```Java
 로그를 출력하는 함수
 System.out.println(): 모두 출력
@@ -699,6 +697,8 @@ protected void onDestroy() {
 호출되는 액티비티가 화면 전체를 가리면 두개씩(onStart, onResume/onPause, onStop) 호출되고, 
 화면 부분을 가리면 하나씩(onResume/onPause) 호출된다.
 ```
+
+![image](https://user-images.githubusercontent.com/38368820/46249524-b6a7ee80-c465-11e8-9d9a-0ff78cfe6eb6.png)
 
 ### 29. Fragment
 - 프래그먼트 기본
