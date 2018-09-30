@@ -732,7 +732,7 @@ protected void onDestroy() {
 
 ### 33. Broadcast Receiver
 - Broadcast Receiver
-``
+```
 BroadcastReceiver
 - 4대 컴포넌트 중에 하나
 - Broadcast: 시스템에서 던지는 메세지
