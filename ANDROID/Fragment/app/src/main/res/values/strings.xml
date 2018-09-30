@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Fragment</string>
+
+    <string name="activity">Activity</string>
+    <string name="one_fragment">One fragment</string>
+    <string name="two_fragment">Two fragment</string>
+
+    <string name="btn_next">Next</string>
+    <string name="btn_back">Back</string>
+</resources>
