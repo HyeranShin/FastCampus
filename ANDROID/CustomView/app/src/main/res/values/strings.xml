@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SamplePushpush</string>
+
+    <string name="btnUp">Up</string>
+    <string name="btnDown">Down</string>
+    <string name="btnLeft">Left</string>
+    <string name="btnRight">Right</string>
+</resources>
