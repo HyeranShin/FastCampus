@@ -742,8 +742,16 @@ BroadcastReceiver
 - 문자메세지 가로채기
 
 ### [안드로이드 두번째 프로젝트]
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/ANDROID/SampleGallery/app/src/main/java/com/hyeran/android/samplegallery">SampleGallery</a>
 - 갤러리 만들기 (1)
 - 갤러리 만들기 (2)
+```Java
+안드로이드에서 제공하는 갤러리 호출
+Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+
+갤러리 액티비티를 커스텀으로 만들게 되면 다른 점: 보안(permission) 처리
+☞ manifest에 <user-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+```
 
 ### 34. CustomView
 - View Pager
