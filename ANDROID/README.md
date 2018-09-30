@@ -761,6 +761,7 @@ Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_
 - Custom View (2)
 
 ### [안드로이드 세번째 프로젝트]
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/ANDROID/SamplePushpush">SamplePushpush</a>
 - push push 게임 만들기 (1)
 - push push 게임 만들기 (2)
 - push push 게임 만들기 (3)
