@@ -732,6 +732,13 @@ protected void onDestroy() {
 
 ### 33. Broadcast Receiver
 - Broadcast Receiver
+``
+BroadcastReceiver
+- 4대 컴포넌트 중에 하나
+- Broadcast: 시스템에서 던지는 메세지
+  ex) 문자메세지, 배터리 방전, 폰 전원 ON/OFF, 카메라 버튼, 어플 설치, 네트워크 연결, 재부팅
+- 앱에서 BroadcastReceiver를 manifest에 등록해서 메세지를 중간에 캐치 할 수 있음
+```
 - 문자메세지 가로채기
 
 ### [안드로이드 두번째 프로젝트]
