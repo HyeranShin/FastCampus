@@ -701,9 +701,11 @@ protected void onDestroy() {
 
 ![image](https://user-images.githubusercontent.com/38368820/46249524-b6a7ee80-c465-11e8-9d9a-0ff78cfe6eb6.png)
 
-### 29. Fragment(<a href="https://github.com/HyeranShin/FastCampus/tree/master/ANDROID/Fragment/app/src/main/java/com/hyeran/android/fragment">Fragment</a>
+### 29. Fragment(<a href="https://github.com/HyeranShin/FastCampus/tree/master/ANDROID/Fragment/app/src/main/java/com/hyeran/android/fragment">Fragment</a>)
 - 프래그먼트 기본
-- Fragment 화면이동 - transaction
+- Fragment 화면이동 
+- transaction
+
 <a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Fragment/app/src/main/java/com/hyeran/android/fragment/OneFragment.java">FragmentLifeCycle</a>
 - Fragment LifeCycle
 ```
@@ -778,6 +780,7 @@ List, RecyclerView와 비슷한데 한번에 하나의 아이템 레이아웃만
 - Tab Layout
 - Fragment in ViewPager
 - Custom View (1)
+
 <a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/CustomView/app/src/main/java/com/hyeran/android/customview/MainActivity.java">CustomView</a>
 - Custom View (2)
 ```
