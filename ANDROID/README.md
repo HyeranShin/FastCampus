@@ -701,11 +701,45 @@ protected void onDestroy() {
 
 ![image](https://user-images.githubusercontent.com/38368820/46249524-b6a7ee80-c465-11e8-9d9a-0ff78cfe6eb6.png)
 
-### 29. Fragment(<a href="https://github.com/HyeranShin/FastCampus/tree/master/ANDROID/Fragment/app/src/main/java/com/hyeran/android/fragment">Fragment</a>)
+### 29. Fragment
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/ANDROID/Fragment/app/src/main/java/com/hyeran/android/fragment">Fragment</a>
 - 프래그먼트 기본
-- Fragment 화면이동 
-- transaction
+```
+Fragment
+- Activity 간 이동 시 생기는 과도한 리소스 손실을 보완하는 측면과 
+  서로 다른 크기의 화면에 대응하는 데 있어서 레이아웃과 같은 뷰가 아니라 액티비티 수준에서 대응하기 위해 설계된 클래스
+- 전체 화면은 Activity가 관리하고, 개별 화면은 Fragment로 구성하여 더 가볍고 구조적으로 접근 가능
+- onCreaveView는 Activity의 onCreate와 같음. Fragment가 Activity 화면에 삽입되는 순간 호출
+- xml 파일을 View 클래스로 만들어서 Activity에게 넘겨주면 Activity가 화면에 보여줌
 
+Fragment 삽입하는 방법
+1. Layouts - FrameLayout
+2. Containers - <fragment>
+Activity의 뷰에서 내가 사용할 Fragment를 지정 ☞ 소스 코드 상에서 Fragment를 Add하는 과정 필요 X
+```
+- Fragment 화면이동 -transaction
+```Java
+transaction을 이용한 Fragment 화면 전환
+- Fragment를 컨트롤하는 로직은 Activity에서
+// 1. 프래그먼트 매니저 가져오기
+FragmentManager manager = getSupportFragmentManager();
+// 2. 트랜잭션 시작하기
+FragmentTransaction transaction = manager.beginTransaction();
+// 3. 프래그먼트 삽입 처리
+transaction.add(R.id.frameLayout, one);
+// 4. 프래그먼트를 backstack에 담아서 뒤로가기 가능하게 - option
+// ***가장 처음에 들어가는 프래그먼트에는 쓰지 않는다.
+transaction.addToBackStack(null)
+/*
+    addToBackStack 함수는 단순하게 layout.xml를 stack에 담는 것이 아니라
+    beginTransaction부터 commit까지를 담는다.
+    그래서 backstack에서 뒤로가기를 하게 되면 트랜잭션 전체를 rollback하는 형태로 동작
+*/
+// 5. 트랜잭션 완료 처리 → 프래그먼트가 액티비티 화면에 주입
+transaction.commit();
+
++) clikable 속성을 체크하면 전 Fragment의 버튼이 클릭되는게 방지된다. 
+```
 <a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Fragment/app/src/main/java/com/hyeran/android/fragment/OneFragment.java">FragmentLifeCycle</a>
 - Fragment LifeCycle
 ```
@@ -753,7 +787,7 @@ BroadcastReceiver
 1. BroadcastReceiver 생성
 2. 동작 구현
 3. manifest에 내가 받을 메세지의 <intent-filter>를 receiver에 추가
-    ☞ priority 속성: 우선 순위 설정. 값이 낮으면 우선해서 메세지 전달, 값이 높으면 시스템이 느린 경우 동작X
+    ☞ priority 속성: 우선 순위 설정. 값이 낮으면 우선해서 메세지 전달, 값이 높으면 시스템이 느린 경우 동작 X
 4. 권한이 필요한 경우 권한 추가
 ```
 
