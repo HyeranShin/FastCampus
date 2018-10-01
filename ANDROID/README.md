@@ -701,10 +701,16 @@ protected void onDestroy() {
 
 ![image](https://user-images.githubusercontent.com/38368820/46249524-b6a7ee80-c465-11e8-9d9a-0ff78cfe6eb6.png)
 
-### 29. Fragment
+### 29. Fragment(<a href="https://github.com/HyeranShin/FastCampus/tree/master/ANDROID/Fragment/app/src/main/java/com/hyeran/android/fragment">Fragment</a>
 - 프래그먼트 기본
 - Fragment 화면이동 - transaction
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/Fragment/app/src/main/java/com/hyeran/android/fragment/OneFragment.java">FragmentLifeCycle</a>
 - Fragment LifeCycle
+```
+개발자들은 생명주기 함수들 때문에 Fragment를 잘 사용하지 않는다.
+Activity 안에 Fragment를 넣게 되면 거의 20개에 가까운 생명주기 함수를 컨트롤 해야하기 때문에 비효율적이다.
+여러 개의 화면을 처리해야 한다면 View를 class로 만들어서 처리한다.
+```
 
 ### 30. List
 - Spinner
@@ -739,7 +745,15 @@ BroadcastReceiver
   ex) 문자메세지, 배터리 방전, 폰 전원 ON/OFF, 카메라 버튼, 어플 설치, 네트워크 연결, 재부팅
 - 앱에서 BroadcastReceiver를 manifest에 등록해서 메세지를 중간에 캐치 할 수 있음
 ```
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/ANDROID/BroadcastReceiver/app/src/main/java/com/hyeran/android/broadcastreceiver">BroadcastReceiver</a>
 - 문자메세지 가로채기
+```
+1. BroadcastReceiver 생성
+2. 동작 구현
+3. manifest에 내가 받을 메세지의 <intent-filter>를 receiver에 추가
+    ☞ priority 속성: 우선 순위 설정. 값이 낮으면 우선해서 메세지 전달, 값이 높으면 시스템이 느린 경우 동작X
+4. 권한이 필요한 경우 권한 추가
+```
 
 ### [안드로이드 두번째 프로젝트]
 <a href="https://github.com/HyeranShin/FastCampus/tree/master/ANDROID/SampleGallery/app/src/main/java/com/hyeran/android/samplegallery">SampleGallery</a>
@@ -754,11 +768,23 @@ Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_
 ```
 
 ### 34. CustomView
+<a href="https://github.com/HyeranShin/FastCampus/tree/master/ANDROID/ViewPager/app/src/main/java/com/hyeran/android/viewpager">ViewPager</a>
 - View Pager
+```
+List, RecyclerView와 비슷한데 한번에 하나의 아이템 레이아웃만 나온다.
+- 만화책처럼 이미지 하나씩만 보여줄 때 뷰페이저에서 기본적으로 제공하는 어댑터 상속받아서 처리
+- Fragment를 뷰페이저로 사용할 때 FragmentStatePagerAdapter 사용
+```
 - Tab Layout
 - Fragment in ViewPager
 - Custom View (1)
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/CustomView/app/src/main/java/com/hyeran/android/customview/MainActivity.java">CustomView</a>
 - Custom View (2)
+```
+- onDraw를 이용해서 화면에 그리기
+    ☞ onDraw: 뷰가 최초로 화면에 호출될 때 호출되는 함수
+- Custom View를 만들었으면 기존 레이아웃에 addView 형태로 아주 쉽게 사용 가능
+```
 
 ### [안드로이드 세번째 프로젝트]
 <a href="https://github.com/HyeranShin/FastCampus/tree/master/ANDROID/SamplePushpush">SamplePushpush</a>
