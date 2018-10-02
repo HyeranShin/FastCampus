@@ -817,6 +817,16 @@ List, RecyclerView와 비슷한데 한번에 하나의 아이템 레이아웃만
 - Fragment를 뷰페이저로 사용할 때 FragmentStatePagerAdapter 사용
 ```
 - Tab Layout
+```
+탭 추가하기
+tabLayout.addTab(tabLayout.newTab().setText(""));
+
+페이저가 변경됨에 따라 자동으로 탭을 변경해주는 리스너
+viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
+탭이 변경됨에 따라 자동으로 페이저를 변경해주는 리스너
+tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(viewPager));
+```
 - Fragment in ViewPager
 
 <a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/CustomView/app/src/main/java/com/hyeran/android/customwidget/Today.java">CustomWidget</a>
