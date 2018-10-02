@@ -813,8 +813,24 @@ List, RecyclerView와 비슷한데 한번에 하나의 아이템 레이아웃만
 ```
 - Tab Layout
 - Fragment in ViewPager
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/CustomView/app/src/main/java/com/hyeran/android/customwidget/Today.java">CustomWidget</a>
 - Custom View (1)
+```Java
+위젯 재정의하기
 
+1. 위젯에서 사용할 속성을 정의 ☞ xml 파일에 정의
+// Values resource file 생성
+<declare-styleable  name="태그이름">
+<attr name="속성이름">
+
+2. 커스텀할 실제 위젯을 상속받아서 재정의 ☞ class 생성
+- 속성의 id = R.styleable.styleable name_attr name
+
+3. 레이아웃에서 커스텀한 위젯 사용
+- 재정의한 속성은 namespace가 android가 아닌 app(res-auto 링크 받는 namespace)
+
++) android.support~ 패키지 밑에 있는 클래스들은 하위 버전 호환성이 고려된 클래스
+```
 <a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/CustomView/app/src/main/java/com/hyeran/android/customview/MainActivity.java">CustomView</a>
 - Custom View (2)
 ```
