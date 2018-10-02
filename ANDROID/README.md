@@ -721,12 +721,16 @@ Activity의 뷰에서 내가 사용할 Fragment를 지정 ☞ 소스 코드 상�
 ```Java
 transaction을 이용한 Fragment 화면 전환
 - Fragment를 컨트롤하는 로직은 Activity에서
+
 // 1. 프래그먼트 매니저 가져오기
 FragmentManager manager = getSupportFragmentManager();
+
 // 2. 트랜잭션 시작하기
 FragmentTransaction transaction = manager.beginTransaction();
+
 // 3. 프래그먼트 삽입 처리
 transaction.add(R.id.frameLayout, one);
+
 // 4. 프래그먼트를 backstack에 담아서 뒤로가기 가능하게 - option
 // ***가장 처음에 들어가는 프래그먼트에는 쓰지 않는다.
 transaction.addToBackStack(null)
@@ -735,6 +739,7 @@ transaction.addToBackStack(null)
     beginTransaction부터 commit까지를 담는다.
     그래서 backstack에서 뒤로가기를 하게 되면 트랜잭션 전체를 rollback하는 형태로 동작
 */
+
 // 5. 트랜잭션 완료 처리 → 프래그먼트가 액티비티 화면에 주입
 transaction.commit();
 
@@ -824,10 +829,10 @@ List, RecyclerView와 비슷한데 한번에 하나의 아이템 레이아웃만
 <attr name="속성이름">
 
 2. 커스텀할 실제 위젯을 상속받아서 재정의 ☞ class 생성
-- 속성의 id = R.styleable.styleable name_attr name
+    * 속성의 id = R.styleable.(styleable name)_(attr name)
 
 3. 레이아웃에서 커스텀한 위젯 사용
-- 재정의한 속성은 namespace가 android가 아닌 app(res-auto 링크 받는 namespace)
+    * 재정의한 속성은 namespace가 android가 아닌 app(res-auto 링크 받는 namespace)
 
 +) android.support~ 패키지 밑에 있는 클래스들은 하위 버전 호환성이 고려된 클래스
 ```
