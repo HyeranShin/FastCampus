@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Spinner - 리스트의 기본이 되는 형태
         // Spinner와 같은 리스트 형태의 뷰를 사용하는 루틴
-        // 데이터 <> 아답터 <> 리스트 뷰
+        // 데이터 <> 어댑터 <> 리스트 뷰
         // 1. 화면과 연결
         // 2. 리스트에 입력될 데이터를 정의
         final String data[] = {"월", "화", "수", "목", "금", "토", "일"};
