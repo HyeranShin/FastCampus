@@ -754,7 +754,19 @@ Activity 안에 Fragment를 넣게 되면 거의 20개에 가까운 생명주기
 ```
 
 ### 30. List
+<a href="https://github.com/HyeranShin/FastCampus/blob/master/ANDROID/List/app/src/main/java/com/hyeran/android/list/MainActivity.java">Spinner</a>
 - Spinner
+```
+Spinner: 리스트의 기본이 되는 형태
+
+Spinner와 같은 리스트 형태의 뷰를 사용하는 방법
+데이터 <> 어터 <> 리스트 뷰
+1. 화면과 연결
+2. 리스트에 입력될 데이터를 정의
+3. 어댑터를 정의 - 데이터 연결
+4. 스피너(리스트 뷰)에 어댑터를 연결
+5. 스피터 선택 처리하기
+```
 - ListView
 - ListView 재사용하기
 - ListView에 Holder 패턴 적용하기
