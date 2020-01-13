@@ -1,6 +1,4 @@
-## FastCampus - 안드로이드 앱 개발 시작하기 CAMP 수강✏
-https://online.fastcampus.co.kr/courses/enrolled/327102
-
+## FastCampus - 안드로이드 앱 개발 시작하기 CAMP 수강 ✏
 
 ### [Java](https://github.com/HyeranShin/FastCampus/blob/master/JAVA)
 
